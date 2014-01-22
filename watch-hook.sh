@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd "$(dirname "$0")"
+
 #
 # spawns the hook, and restarts it if it goes down
 #
