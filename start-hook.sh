@@ -8,4 +8,4 @@ cd "$(dirname "$0")"
 #
 # See: https://github.com/Coreh/hookshot
 #
-hookshot -p 9001 "git pull"
+hookshot -p 9001 "git fetch && git reset --hard origin/master"
