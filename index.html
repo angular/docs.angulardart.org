@@ -16,6 +16,18 @@
   
   
   <script src="packages/browser/interop.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+    <!-- angularytics -->
+    <script src="static/js/angularytics.min.js"></script>
+    <script>
+        angular.module('docviewer-app', ['angularytics'])
+                .config(function(AngularyticsProvider) {
+                    AngularyticsProvider.setEventHandlers(['Console', 'GoogleUniversal']);
+                }).run(function(Angularytics) {
+                    Angularytics.init();
+                });
+    </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AngularDart API Reference</title>
 </head>
