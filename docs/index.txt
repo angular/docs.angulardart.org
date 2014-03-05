@@ -1267,6 +1267,10 @@ angular/angular.TemplateCache class
 angular-core-dom.TemplateCache class
 angular/angular.TemplateCache.TemplateCache- constructor
 angular-core-dom.TemplateCache.TemplateCache- constructor
+angular/angular.DirectiveSelectorFactory class
+angular-core-dom.DirectiveSelectorFactory class
+angular/angular.DirectiveSelectorFactory.selector method
+angular-core-dom.DirectiveSelectorFactory.selector method
 angular/angular.DirectiveSelector typedef
 angular-core-dom.DirectiveSelector typedef
 angular/angular.NodeCursor class
@@ -1424,7 +1428,8 @@ angular/angular.FieldMetadataExtractor.call method
 angular-core-dom.FieldMetadataExtractor.call method
 angular/angular.DirectiveMap class
 angular-core-dom.DirectiveMap class
-angular/angular.DirectiveMap.selector property
+angular/angular.DirectiveMap.selector getter
+angular-core-dom.DirectiveMap.selector getter
 angular/angular.DirectiveMap.DirectiveMap- constructor
 angular-core-dom.DirectiveMap.DirectiveMap- constructor
 angular/angular.TemplateLoader class
@@ -2519,8 +2524,6 @@ angular/angular.AngularModule class
 angular/angular.AngularModule.AngularModule- constructor
 angular/angular.NOT_IMPLEMENTED method
 angular-core.NOT_IMPLEMENTED method
-angular/angular.directiveSelectorFactory method
-angular-core-dom.directiveSelectorFactory method
 angular/angular.forceNewDirectivesAndFilters method
 angular-core-dom.forceNewDirectivesAndFilters method
 angular/angular.cloneElements method
