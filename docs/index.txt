@@ -1784,6 +1784,8 @@ angular/angular.NgControl.detach method
 angular-directive.NgControl.detach method
 angular/angular.NgControl.reset method
 angular-directive.NgControl.reset method
+angular/angular.NgControl.hasError method
+angular-directive.NgControl.hasError method
 angular/angular.NgControl.submitted getter
 angular-directive.NgControl.submitted getter
 angular/angular.NgControl.valid_submit getter
@@ -1874,6 +1876,8 @@ angular/angular.NgNullControl.reset method
 angular-directive.NgNullControl.reset method
 angular/angular.NgNullControl.detach method
 angular-directive.NgNullControl.detach method
+angular/angular.NgNullControl.hasError method
+angular-directive.NgNullControl.hasError method
 angular/angular.NgForm class
 angular-directive.NgForm class
 angular/angular.NgForm.NgForm- constructor
