@@ -1305,8 +1305,15 @@ angular/angular.DirectiveSelectorFactory.DirectiveSelectorFactory- constructor
 angular-core-dom.DirectiveSelectorFactory.DirectiveSelectorFactory- constructor
 angular/angular.DirectiveSelectorFactory.selector method
 angular-core-dom.DirectiveSelectorFactory.selector method
-angular/angular.DirectiveSelector typedef
-angular-core-dom.DirectiveSelector typedef
+angular/angular.DirectiveSelector class
+angular-core-dom.DirectiveSelector class
+angular/angular.DirectiveSelector.elementSelector property
+angular/angular.DirectiveSelector.attrSelector property
+angular/angular.DirectiveSelector.textSelector property
+angular/angular.DirectiveSelector.DirectiveSelector- constructor
+angular-core-dom.DirectiveSelector.DirectiveSelector- constructor
+angular/angular.DirectiveSelector.match method
+angular-core-dom.DirectiveSelector.match method
 angular/angular.NodeCursor class
 angular-core-dom.NodeCursor class
 angular/angular.NodeCursor.stack property
