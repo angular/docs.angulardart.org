@@ -1312,6 +1312,10 @@ angular/angular.DirectiveSelector.attrSelector property
 angular/angular.DirectiveSelector.textSelector property
 angular/angular.DirectiveSelector.DirectiveSelector- constructor
 angular-core-dom.DirectiveSelector.DirectiveSelector- constructor
+angular/angular.DirectiveSelector.matchElement method
+angular-core-dom.DirectiveSelector.matchElement method
+angular/angular.DirectiveSelector.matchText method
+angular-core-dom.DirectiveSelector.matchText method
 angular/angular.DirectiveSelector.match method
 angular-core-dom.DirectiveSelector.match method
 angular/angular.NodeCursor class
