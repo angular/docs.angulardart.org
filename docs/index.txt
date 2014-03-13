@@ -1481,6 +1481,8 @@ angular/angular.TaggedElementBinder.TaggedElementBinder- constructor
 angular-core-dom.TaggedElementBinder.TaggedElementBinder- constructor
 angular/angular.TaggedElementBinder.addText method
 angular-core-dom.TaggedElementBinder.addText method
+angular/angular.TaggedElementBinder.toString method
+angular-core-dom.TaggedElementBinder.toString method
 angular/angular.TaggedTextBinder class
 angular-core-dom.TaggedTextBinder class
 angular/angular.TaggedTextBinder.binder property
