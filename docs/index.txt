@@ -554,6 +554,8 @@ angular/angular.CircularDependencyError class
 angular/angular.CircularDependencyError.CircularDependencyError- constructor
 angular/angular.NoProviderError class
 angular/angular.NoProviderError.NoProviderError- constructor
+angular/angular.InvalidBindingError class
+angular/angular.InvalidBindingError.InvalidBindingError- constructor
 angular/angular.ObjectFactory typedef
 angular/angular.Module class
 angular-animate.Module class
@@ -620,8 +622,14 @@ angular-perf.Module.install method
 angular-routing.Module.install method
 angular/angular.TypeFactory typedef
 angular/angular.Visibility typedef
-angular/angular.CreationStrategy typedef
 angular/angular.FactoryFn typedef
+angular/angular.Key class
+angular/angular.Key.type property
+angular/angular.Key.annotation property
+angular/angular.Key.Key- constructor
+angular/angular.Key.== operator
+angular/angular.Key.hashCode getter
+angular/angular.Key.toString method
 angular/angular.Injector class
 angular/angular.Injector.name property
 angular/angular.Injector.parent property
@@ -633,6 +641,7 @@ angular/angular.Injector.Injector-fromParent constructor
 angular/angular.Injector.root getter
 angular/angular.Injector.types getter
 angular/angular.Injector.get method
+angular/angular.Injector.getByKey method
 angular/angular.Injector.createChild method
 angular/angular.Injector.newFromParent method
 angular/angular.Injector.newInstanceOf method

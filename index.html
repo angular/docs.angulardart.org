@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="static/css/angulardart-style.css">
   <link rel="stylesheet" href="static/css/pics.css">
   <link rel="stylesheet" href="static/css/prettify.css">
+  <link rel="stylesheet" href="static/css/print.css">
   
   
   
@@ -520,7 +521,9 @@
         <dartdoc-minimap-class item="{{viewer.currentPage}}">
         </dartdoc-minimap-class>
       </template>
-      <div>AngularDart Build {{buildIdentifier}}</div>
+      <template if="{{showVersion}}">
+        <div>Version {{version}}</div>
+      </template>
     </div>
   </template>
 </polymer-element>
