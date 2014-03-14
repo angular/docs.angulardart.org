@@ -944,7 +944,6 @@ angular-core.Scope.destroy method
 angular/angular.RootScope.STATE_APPLY property
 angular/angular.RootScope.STATE_DIGEST property
 angular/angular.RootScope.STATE_FLUSH property
-angular/angular.RootScope.visitor property
 angular/angular.RootScope.RootScope- constructor
 angular-core.RootScope.RootScope- constructor
 angular/angular.RootScope.rootScope getter
@@ -1080,7 +1079,7 @@ angular-core.Interpolate.call method
 angular/angular.Interpolation class
 angular-core.Interpolation class
 angular/angular.Interpolation.template property
-angular/angular.Interpolation.seperators property
+angular/angular.Interpolation.separators property
 angular/angular.Interpolation.expressions property
 angular/angular.Interpolation.setter property
 angular/angular.Interpolation.Interpolation- constructor
@@ -1564,8 +1563,7 @@ angular/angular.DirectiveMap.DirectiveMap- constructor
 angular-core-dom.DirectiveMap.DirectiveMap- constructor
 angular/angular.TemplateLoader class
 angular-core-dom.TemplateLoader class
-angular/angular.TemplateLoader.template getter
-angular-core-dom.TemplateLoader.template getter
+angular/angular.TemplateLoader.template property
 angular/angular.TemplateLoader.TemplateLoader- constructor
 angular-core-dom.TemplateLoader.TemplateLoader- constructor
 angular/angular.NodeAttrs class
