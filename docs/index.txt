@@ -2946,6 +2946,11 @@ angular-mock.Timer.Timer-periodic constructor
 angular-mock.Timer.run method
 angular-mock.Timer.cancel method
 angular-mock.Timer.isActive getter
+angular-mock.FunctionComposition class
+angular-mock.FunctionComposition.outer property
+angular-mock.FunctionComposition.inner property
+angular-mock.FunctionComposition.FunctionComposition- constructor
+angular-mock.FunctionComposition.call method
 angular-mock.MockDocument class
 angular-mock.Mock class
 angular-mock.Mock.name property
