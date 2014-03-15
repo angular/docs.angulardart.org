@@ -1604,6 +1604,10 @@ angular/angular.NodeAttrs.containsKey method
 angular-core-dom.NodeAttrs.containsKey method
 angular/angular.NodeAttrs.keys getter
 angular-core-dom.NodeAttrs.keys getter
+angular/angular.NodeAttrs.listenObserverChanges method
+angular-core-dom.NodeAttrs.listenObserverChanges method
+angular/angular.ObserverChanged typedef
+angular-core-dom.ObserverChanged typedef
 angular/angular.AttributeChanged typedef
 angular-core-dom.AttributeChanged typedef
 angular/angular.DirectiveRef class
