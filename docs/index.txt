@@ -1370,6 +1370,8 @@ angular/angular.NodeCursor.remove method
 angular-core-dom.NodeCursor.remove method
 angular/angular.NodeCursor.isInstance getter
 angular-core-dom.NodeCursor.isInstance getter
+angular/angular.NodeCursor.toString method
+angular-core-dom.NodeCursor.toString method
 angular/angular.NgAttrMustacheDirective class
 angular-core-dom.NgAttrMustacheDirective class
 angular/angular.NgAttrMustacheDirective.NgAttrMustacheDirective- constructor
@@ -1528,6 +1530,8 @@ angular/angular.TaggedTextBinder.binder property
 angular/angular.TaggedTextBinder.offsetIndex property
 angular/angular.TaggedTextBinder.TaggedTextBinder- constructor
 angular-core-dom.TaggedTextBinder.TaggedTextBinder- constructor
+angular/angular.TaggedTextBinder.toString method
+angular-core-dom.TaggedTextBinder.toString method
 angular/angular.ElementBinderTree class
 angular-core-dom.ElementBinderTree class
 angular/angular.ElementBinderTree.binder property
@@ -1566,6 +1570,8 @@ angular/angular.ElementBinder.bind method
 angular-core-dom.ElementBinder.bind method
 angular/angular.ElementBinder.createMappings method
 angular-core-dom.ElementBinder.createMappings method
+angular/angular.ElementBinder.toString method
+angular-core-dom.ElementBinder.toString method
 angular/angular.ElementBinderFactory class
 angular-core-dom.ElementBinderFactory class
 angular/angular.ElementBinderFactory.ElementBinderFactory- constructor
