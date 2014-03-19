@@ -245,7 +245,6 @@ angular/angular-directive.NgFalseValue.readValue method
 angular/angular-directive.NgForm class
 angular/angular-directive.NgForm.NgForm- constructor
 angular/angular-directive.NgForm.[] operator
-angular/angular-directive.NgForm.[]= operator
 angular/angular-directive.NgForm.controls getter
 angular/angular-directive.NgForm.name getter
 angular/angular-directive.NgForm.name= setter
@@ -282,6 +281,7 @@ angular/angular-directive.NgModel.removeInfo method
 angular/angular-directive.NgModel.removeValidator method
 angular/angular-directive.NgModel.reset method
 angular/angular-directive.NgModel.validate method
+angular/angular-directive.NgModel.validateLater method
 angular/angular-directive.NgModel.validators getter
 angular/angular-directive.NgModel.viewValue getter
 angular/angular-directive.NgModel.viewValue= setter
@@ -1922,7 +1922,6 @@ angular/angular.NgFilterModule.NgFilterModule- constructor
 angular/angular.NgForm class
 angular/angular.NgForm.NgForm- constructor
 angular/angular.NgForm.[] operator
-angular/angular.NgForm.[]= operator
 angular/angular.NgForm.controls getter
 angular/angular.NgForm.name getter
 angular/angular.NgForm.name= setter
@@ -1969,6 +1968,7 @@ angular/angular.NgModel.render property
 angular/angular.NgModel.reset method
 angular/angular.NgModel.setter property
 angular/angular.NgModel.validate method
+angular/angular.NgModel.validateLater method
 angular/angular.NgModel.validators getter
 angular/angular.NgModel.viewValue getter
 angular/angular.NgModel.viewValue= setter
@@ -2384,9 +2384,17 @@ angular/angular.ScopeStats.digestFieldStopwatch property
 angular/angular.ScopeStats.digestLoop method
 angular/angular.ScopeStats.digestProcessStopwatch property
 angular/angular.ScopeStats.digestStart method
+angular/angular.ScopeStats.domReadEnd method
+angular/angular.ScopeStats.domReadStart method
+angular/angular.ScopeStats.domWriteEnd method
+angular/angular.ScopeStats.domWriteStart method
+angular/angular.ScopeStats.flushAssertEnd method
+angular/angular.ScopeStats.flushAssertStart method
+angular/angular.ScopeStats.flushEnd method
 angular/angular.ScopeStats.flushEvalStopwatch property
 angular/angular.ScopeStats.flushFieldStopwatch property
 angular/angular.ScopeStats.flushProcessStopwatch property
+angular/angular.ScopeStats.flushStart method
 angular/angular.ScopeStats.nf property
 angular/angular.ScopeStats.report property
 angular/angular.ScopeStats.toString method
