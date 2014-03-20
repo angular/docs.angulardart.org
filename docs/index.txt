@@ -1474,14 +1474,8 @@ angular/angular.EventFunction typedef
 angular/angular.EventHandler class
 angular/angular.EventHandler.EventHandler- constructor
 angular/angular.EventHandler.attrNameToEventName method
-angular/angular.EventHandler.eventListener method
 angular/angular.EventHandler.eventNameToAttrName method
-angular/angular.EventHandler.exceptionHandler property
-angular/angular.EventHandler.expando property
-angular/angular.EventHandler.getScope method
-angular/angular.EventHandler.listeners property
 angular/angular.EventHandler.register method
-angular/angular.EventHandler.rootNode property
 angular/angular.ExceptionHandler class
 angular/angular.ExceptionHandler.call method
 angular/angular.ExpressionVisitor class
