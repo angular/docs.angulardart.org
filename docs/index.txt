@@ -1693,6 +1693,7 @@ angular/angular.Module.type method
 angular/angular.Module.typeFactories getter
 angular/angular.Module.typeFactories= setter
 angular/angular.Module.value method
+angular/angular.Mustache typedef
 angular/angular.NOT_IMPLEMENTED method
 angular/angular.NgADirective class
 angular/angular.NgADirective.NgADirective- constructor
@@ -2221,7 +2222,6 @@ angular/angular.NumberToken.toNumber method
 angular/angular.NumberToken.toString method
 angular/angular.OPERATORS property
 angular/angular.ObjectFactory typedef
-angular/angular.ObserverChanged typedef
 angular/angular.OperatorToken class
 angular/angular.OperatorToken.OperatorToken- constructor
 angular/angular.OperatorToken.isOperator method
