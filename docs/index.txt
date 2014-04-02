@@ -280,7 +280,7 @@ angular-core.NgAnnotation.exportExpressionAttrs property
 angular-core.NgAnnotation.exportExpressions property
 angular-core.NgAnnotation.hashCode getter
 angular-core.NgAnnotation.map property
-angular-core.NgAnnotation.publishTypes property
+angular-core.NgAnnotation.module property
 angular-core.NgAnnotation.selector property
 angular-core.NgAnnotation.toString method
 angular-core.NgAnnotation.visibility property
@@ -632,6 +632,7 @@ angular-directive.NgForm class
 angular-directive.NgForm.NgForm- constructor
 angular-directive.NgForm.[] operator
 angular-directive.NgForm.controls getter
+angular-directive.NgForm.module method
 angular-directive.NgForm.name getter
 angular-directive.NgForm.name= setter
 angular-directive.NgHideDirective class
@@ -1743,6 +1744,7 @@ angular-routing.Module.typeFactories= setter
 angular-routing.Module.value method
 angular-routing.NgBindRouteDirective class
 angular-routing.NgBindRouteDirective.NgBindRouteDirective- constructor
+angular-routing.NgBindRouteDirective.module method
 angular-routing.NgBindRouteDirective.parameters getter
 angular-routing.NgBindRouteDirective.route getter
 angular-routing.NgBindRouteDirective.routeName property
@@ -1774,6 +1776,7 @@ angular-routing.NgViewDirective.detach method
 angular-routing.NgViewDirective.element property
 angular-routing.NgViewDirective.injector property
 angular-routing.NgViewDirective.locationService property
+angular-routing.NgViewDirective.module method
 angular-routing.NgViewDirective.parameters getter
 angular-routing.NgViewDirective.route getter
 angular-routing.NgViewDirective.routeName getter
