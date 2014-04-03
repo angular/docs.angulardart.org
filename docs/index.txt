@@ -300,11 +300,11 @@ angular-core.NgCallback.NgCallback- constructor
 angular-core.NgCallback.mappingSpec property
 angular-core.NgComponent class
 angular-core.NgComponent.NgComponent- constructor
-angular-core.NgComponent.applyAuthorStyles property
+angular-core.NgComponent.applyAuthorStyles getter
 angular-core.NgComponent.cloneWithNewMap method
 angular-core.NgComponent.cssUrls getter
 angular-core.NgComponent.publishAs property
-angular-core.NgComponent.resetStyleInheritance property
+angular-core.NgComponent.resetStyleInheritance getter
 angular-core.NgComponent.template property
 angular-core.NgComponent.templateUrl property
 angular-core.NgController class
