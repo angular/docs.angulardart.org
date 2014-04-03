@@ -154,32 +154,30 @@ var $$={}
 
     if (getterStubName) {
       f = tearOff(funcs, array, isStatic, name, isIntercepted);
+      f.getterStub = true;
       if (isStatic) init.globalFunctions[name] = f;
       originalDescriptor[getterStubName] = descriptor[getterStubName] = f;
       funcs.push(f);
       if (getterStubName) functions.push(getterStubName);
       f.$stubName = getterStubName;
       f.$callName = null;
+      if (isIntercepted) init.interceptedNames[getterStubName] = true;
     }
     if (isReflectable) {
       for (var i = 0; i < funcs.length; i++) {
         funcs[i].$reflectable = 1;
         funcs[i].$reflectionInfo = array;
       }
-    }
-    if (isReflectable) {
+      var mangledNames = isStatic ? init.mangledGlobalNames : init.mangledNames;
       var unmangledName = array[unmangledNameIndex];
-      var reflectionName = unmangledName + ":" + requiredParameterCount + ":" + optionalParameterCount;
-      if (isGetter) {
-        reflectionName = unmangledName;
-      } else if (isSetter) {
-        reflectionName = unmangledName + "=";
+      var reflectionName = unmangledName;
+      if (getterStubName) mangledNames[getterStubName] = reflectionName;
+      if (isSetter) {
+        reflectionName += "=";
+      } else if (!isGetter) {
+        reflectionName += ":" + requiredParameterCount + ":" + optionalParameterCount;
       }
-      if (isStatic) {
-        init.mangledGlobalNames[name] = reflectionName;
-      } else {
-        init.mangledNames[name] = reflectionName;
-      }
+      mangledNames[name] = reflectionName;
       funcs[0].$reflectionName = reflectionName;
       funcs[0].$metadataIndex = unmangledNameIndex + 1;
       if (optionalParameterCount) descriptor[unmangledName + "*"] = funcs[0];
@@ -230,6 +228,7 @@ var $$={}
   if (!init.statics) init.statics = map();
   if (!init.typeInformation) init.typeInformation = map();
   if (!init.globalFunctions) init.globalFunctions = map();
+  if (!init.interceptedNames) init.interceptedNames = map();
   var libraries = init.libraries;
   var mangledNames = init.mangledNames;
   var mangledGlobalNames = init.mangledGlobalNames;
@@ -1454,7 +1453,8 @@ v=u}w.constructor=v
 v.prototype=w
 u=!d
 if(u){t=e.length==1&&!0
-s=H.SD(a,z,t)}else{w.$name=f
+s=H.SD(a,z,t)
+s.$reflectionInfo=c}else{w.$name=f
 s=z
 t=!1}if(typeof x=="number")r=(function(s){return function(){return init.metadata[s]}})(x)
 else if(u&&typeof x=="function"){q=t?H.yS:H.eZ
@@ -1464,7 +1464,7 @@ w[y]=s
 for(u=b.length,p=1;p<u;++p){o=b[p]
 n=o.$callName
 if(n!=null){m=d?o:H.SD(a,o,t)
-w[n]=m}}w["call*"]=z
+w[n]=m}}w["call*"]=s
 return v},"call$6","Vi",12,0,null,47,[],64,[],65,[],66,[],67,[],68,[]],
 rc:[function(a,b,c,d){var z=H.eZ
 switch(b?-1:a){case 0:return function(n,S){return function(){return S(this)[n]()}}(c,z)
@@ -1840,10 +1840,10 @@ t=z[u]
 s=w+u
 if(s<0||s>=x.length)return H.e(x,s)
 v.u(0,new H.wv(t),x[s])}return v},
-ZU:function(a){var z,y,x,w,v,u,t,s
+ZU:function(a){var z,y,x,w,v,u,t,s,r,q
 z=J.x(a)
 y=this.uk
-x=$.HU.indexOf(y)!==-1
+x=Object.prototype.hasOwnProperty.call(init.interceptedNames,y)||$.HU.indexOf(y)!==-1
 if(x){w=a===z?null:z
 v=z
 z=w}else{v=a
@@ -1854,7 +1854,9 @@ if(u==null){z=J.x(a)
 u=z[t+"*"]
 if(u!=null)x=!0
 else z=null}s=!0}else s=!1
-if(typeof u=="function"){if(!("$reflectable" in u))H.Hz(J.GL(this.gWa()))
+if(typeof u=="function"){if(!("$reflectable" in u)){r=J.x(a)
+q=!!r.$isv||!!r.$isBp}else q=!0
+if(!q)H.Hz(J.GL(this.gWa()))
 if(s)return new H.IW(H.zh(u),y,u,x,z)
 else return new H.A2(y,u,x,z)}else return new H.Iz(z)},
 static:{"^":"hAw,oY,Y8"}},
@@ -2070,7 +2072,8 @@ bu:function(a){return"Closure"},
 $isTp:true,
 $isEH:true},
 Bp:{
-"^":"Tp;"},
+"^":"Tp;",
+$isBp:true},
 v:{
 "^":"Bp;nw,jm,EP,RA",
 n:function(a,b){if(b==null)return!1
@@ -4012,8 +4015,8 @@ if(!(v<u))break
 c$0:{t=x.t(z,v)
 s=w[t]
 r=$.jU().t(0,t)
-if(r==null)break c$0
-q=C.xB.nC(r,"new ")
+if(r==null||!!s.getterStub)break c$0
+q=J.rY(r).nC(r,"new ")
 if(q){u=C.xB.yn(r,4)
 r=H.ys(u,"$",".")}p=H.S5(r,s,!q,q)
 y.push(p)
