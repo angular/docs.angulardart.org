@@ -115,12 +115,14 @@ angular-app-static.ClosureMap class
 angular-app-static.ClosureMap.lookupFunction method
 angular-app-static.ClosureMap.lookupGetter method
 angular-app-static.ClosureMap.lookupSetter method
+angular-app-static.ClosureMap.lookupSymbol method
 angular-app-static.StaticClosureMap class
 angular-app-static.StaticClosureMap.StaticClosureMap- constructor
 angular-app-static.StaticClosureMap.getters property
 angular-app-static.StaticClosureMap.lookupFunction method
 angular-app-static.StaticClosureMap.lookupGetter method
 angular-app-static.StaticClosureMap.lookupSetter method
+angular-app-static.StaticClosureMap.lookupSymbol method
 angular-app-static.StaticClosureMap.setters property
 angular-app-static.StaticClosureMap.symbols property
 angular-app-static.staticApplication method
@@ -442,6 +444,7 @@ angular-core.ScopeStats.flushStart method
 angular-core.ScopeStats.processStopwatch property
 angular-core.ScopeStatsConfig class
 angular-core.ScopeStatsConfig.ScopeStatsConfig- constructor
+angular-core.ScopeStatsConfig.ScopeStatsConfig-enabled constructor
 angular-core.ScopeStatsConfig.emit property
 angular-core.ScopeStatsEmitter class
 angular-core.ScopeStatsEmitter.emit method
