@@ -579,7 +579,6 @@ angular-directive.NgBindTemplate.bind= setter
 angular-directive.NgBindTemplate.element property
 angular-directive.NgBooleanAttribute class
 angular-directive.NgBooleanAttribute.NgBooleanAttribute- constructor
-angular-directive.NgBooleanAttribute.attrs property
 angular-directive.NgBooleanAttribute.checked= setter
 angular-directive.NgBooleanAttribute.disabled= setter
 angular-directive.NgBooleanAttribute.multiple= setter
@@ -852,7 +851,6 @@ angular-directive.NgShow.element property
 angular-directive.NgShow.show= setter
 angular-directive.NgSource class
 angular-directive.NgSource.NgSource- constructor
-angular-directive.NgSource.attrs property
 angular-directive.NgSource.href= setter
 angular-directive.NgSource.src= setter
 angular-directive.NgSource.srcset= setter
