@@ -341,6 +341,12 @@ angular-core.NgAnimate.insert method
 angular-core.NgAnimate.move method
 angular-core.NgAnimate.remove method
 angular-core.NgAnimate.removeClass method
+angular-core.NgAnnotation class
+angular-core.NgAnnotation.== operator
+angular-core.NgAnnotation.NgAnnotation- constructor
+angular-core.NgAnnotation.cloneWithNewMap method
+angular-core.NgAnnotation.hashCode getter
+angular-core.NgAnnotation.toString method
 angular-core.NgAttachAware class
 angular-core.NgAttachAware.attach method
 angular-core.NgAttr class
@@ -889,8 +895,9 @@ angular-directive.NgValidator.name getter
 angular-directive.NgValue class
 angular-directive.NgValue.NgValue- constructor
 angular-directive.NgValue.element property
-angular-directive.NgValue.readValue method
-angular-directive.NgValue.value property
+angular-directive.NgValue.moduleFactory method
+angular-directive.NgValue.value getter
+angular-directive.NgValue.value= setter
 angular-directive.OptionValue class
 angular-directive.OptionValue.OptionValue- constructor
 angular-directive.OptionValue.attach method
