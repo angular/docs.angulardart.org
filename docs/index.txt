@@ -785,7 +785,6 @@ angular-directive.NgModelUrlValidator.isValid method
 angular-directive.NgModelUrlValidator.name property
 angular-directive.NgNonBindable class
 angular-directive.NgNullControl class
-angular-directive.NgNullControl.NgNullControl- constructor
 angular-directive.NgNullControl.addControl method
 angular-directive.NgNullControl.addErrorState method
 angular-directive.NgNullControl.addInfoState method
