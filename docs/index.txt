@@ -398,7 +398,6 @@ angular-core.RootScope.state getter
 angular-core.Scope class
 angular-core.Scope.Scope- constructor
 angular-core.Scope.apply method
-angular-core.Scope.applyInZone method
 angular-core.Scope.broadcast method
 angular-core.Scope.context property
 angular-core.Scope.createChild method
