@@ -880,9 +880,7 @@ angular-directive.OptionValue.detach method
 angular-directive.OptionValue.ngValue getter
 angular-filter library
 angular-filter.Currency class
-angular-filter.Currency.Currency- constructor
 angular-filter.Currency.call method
-angular-filter.Currency.nf property
 angular-filter.Date class
 angular-filter.Date.call method
 angular-filter.Filter class
@@ -906,7 +904,6 @@ angular-filter.NgFilterModule class
 angular-filter.NgFilterModule.NgFilterModule- constructor
 angular-filter.Number class
 angular-filter.Number.call method
-angular-filter.Number.nfs property
 angular-filter.OrderBy class
 angular-filter.OrderBy.OrderBy- constructor
 angular-filter.OrderBy.call method
