@@ -535,6 +535,9 @@ angular-directive.NgA.element property
 angular-directive.NgAttribute class
 angular-directive.NgAttribute.NgAttribute- constructor
 angular-directive.NgAttribute.attach method
+angular-directive.NgBaseCss class
+angular-directive.NgBaseCss.urls getter
+angular-directive.NgBaseCss.urls= setter
 angular-directive.NgBind class
 angular-directive.NgBind.NgBind- constructor
 angular-directive.NgBind.element property
