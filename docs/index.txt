@@ -197,6 +197,8 @@ angular-core-annotation.NgOneWay class
 angular-core-annotation.NgOneWay.NgOneWay- constructor
 angular-core-annotation.NgOneWayOneTime class
 angular-core-annotation.NgOneWayOneTime.NgOneWayOneTime- constructor
+angular-core-annotation.NgShadowRootAware class
+angular-core-annotation.NgShadowRootAware.onShadowRoot method
 angular-core-annotation.NgTwoWay class
 angular-core-annotation.NgTwoWay.NgTwoWay- constructor
 angular-core.Animation class
