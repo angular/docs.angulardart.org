@@ -2444,6 +2444,7 @@ route-client.Routable class
 route-client.Routable.configureRoute method
 route-client.Route class
 route-client.Route.addRoute method
+route-client.Route.dontLeaveOnParamChanges getter
 route-client.Route.findRoute method
 route-client.Route.getRoute method
 route-client.Route.isActive getter
@@ -2468,6 +2469,7 @@ route-client.RouteEvent.route property
 route-client.RouteHandle class
 route-client.RouteHandle.addRoute method
 route-client.RouteHandle.discard method
+route-client.RouteHandle.dontLeaveOnParamChanges getter
 route-client.RouteHandle.findRoute method
 route-client.RouteHandle.getRoute method
 route-client.RouteHandle.isActive getter
@@ -2482,6 +2484,7 @@ route-client.RouteHandle.parent getter
 route-client.RouteHandle.path getter
 route-client.RouteImpl class
 route-client.RouteImpl.addRoute method
+route-client.RouteImpl.dontLeaveOnParamChanges property
 route-client.RouteImpl.findRoute method
 route-client.RouteImpl.getRoute method
 route-client.RouteImpl.isActive getter
