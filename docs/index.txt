@@ -1864,6 +1864,7 @@ angular-routing.NgRouteCfg.mount property
 angular-routing.NgRouteCfg.path property
 angular-routing.NgRouteCfg.preEnter property
 angular-routing.NgRouteCfg.view property
+angular-routing.NgRouteCfg.viewHtml property
 angular-routing.NgRoutingHelper class
 angular-routing.NgRoutingHelper.NgRoutingHelper- constructor
 angular-routing.NgRoutingHelper.portals property
