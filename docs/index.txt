@@ -388,6 +388,7 @@ angular-core.PrototypeMap.putIfAbsent method
 angular-core.PrototypeMap.remove method
 angular-core.PrototypeMap.self property
 angular-core.PrototypeMap.values getter
+angular-core.ReactionFn typedef
 angular-core.RequestErrorInterceptor typedef
 angular-core.RequestInterceptor typedef
 angular-core.Response typedef
