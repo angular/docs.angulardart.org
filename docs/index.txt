@@ -290,14 +290,12 @@ angular-core.Http.call method
 angular-core.Http.defaults property
 angular-core.Http.delete method
 angular-core.Http.get method
-angular-core.Http.getString method
 angular-core.Http.head method
 angular-core.Http.jsonp method
 angular-core.Http.parseHeaders method
 angular-core.Http.pendingRequests getter
 angular-core.Http.post method
 angular-core.Http.put method
-angular-core.Http.request method
 angular-core.HttpBackend class
 angular-core.HttpBackend.request method
 angular-core.HttpDefaultHeaders class
@@ -926,6 +924,8 @@ angular-directive.OptionValue.attach method
 angular-directive.OptionValue.detach method
 angular-directive.OptionValue.ngValue getter
 angular-formatter library
+angular-formatter.Arrayify class
+angular-formatter.Arrayify.call method
 angular-formatter.Currency class
 angular-formatter.Currency.call method
 angular-formatter.Date class
