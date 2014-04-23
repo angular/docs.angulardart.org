@@ -1180,6 +1180,7 @@ angular-mock.HistoryBase.go method
 angular-mock.HtmlDocument class
 angular-mock.HtmlDocument.body property
 angular-mock.HtmlDocument.caretRangeFromPoint method
+angular-mock.HtmlDocument.createElementUpgrader method
 angular-mock.HtmlDocument.elementFromPoint method
 angular-mock.HtmlDocument.exitFullscreen method
 angular-mock.HtmlDocument.exitPointerLock method
@@ -1546,6 +1547,7 @@ angular-mock.Node.NOTATION_NODE property
 angular-mock.Node.PROCESSING_INSTRUCTION_NODE property
 angular-mock.Node.TEXT_NODE property
 angular-mock.Node.append method
+angular-mock.Node.baseUri property
 angular-mock.Node.childNodes property
 angular-mock.Node.clone method
 angular-mock.Node.contains method
@@ -1860,15 +1862,10 @@ angular-routing.NgRoutingUsePushState.usePushState property
 angular-routing.NgView class
 angular-routing.NgView.NgView- constructor
 angular-routing.NgView.detach method
-angular-routing.NgView.element property
-angular-routing.NgView.injector property
-angular-routing.NgView.locationService property
 angular-routing.NgView.module method
 angular-routing.NgView.parameters getter
 angular-routing.NgView.route getter
 angular-routing.NgView.routeName getter
-angular-routing.NgView.scope property
-angular-routing.NgView.viewCache property
 angular-routing.RouteInitializer class
 angular-routing.RouteInitializer.init method
 angular-routing.RouteInitializerFn typedef
