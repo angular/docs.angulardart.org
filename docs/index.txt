@@ -337,7 +337,6 @@ angular-core.HttpResponseConfig.headers property
 angular-core.HttpResponseConfig.params property
 angular-core.HttpResponseConfig.url property
 angular-core.Interpolate class
-angular-core.Interpolate.Interpolate- constructor
 angular-core.Interpolate.call method
 angular-core.LocationWrapper class
 angular-core.LocationWrapper.location getter
