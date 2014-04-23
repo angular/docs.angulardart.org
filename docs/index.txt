@@ -145,6 +145,7 @@ angular-core-annotation.Component.publishAs property
 angular-core-annotation.Component.resetStyleInheritance getter
 angular-core-annotation.Component.template property
 angular-core-annotation.Component.templateUrl property
+angular-core-annotation.Component.useShadowDom property
 angular-core-annotation.Controller class
 angular-core-annotation.Controller.Controller- constructor
 angular-core-annotation.Controller.publishAs property
