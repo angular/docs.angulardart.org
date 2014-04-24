@@ -2457,6 +2457,14 @@ di.Injector.root getter
 di.Injector.types getter
 di.InvalidBindingError class
 di.InvalidBindingError.InvalidBindingError- constructor
+di.Key class
+di.Key.== operator
+di.Key.Key- constructor
+di.Key.annotation property
+di.Key.hashCode property
+di.Key.id property
+di.Key.toString method
+di.Key.type property
 di.Module class
 di.Module.bindings getter
 di.Module.factory method
@@ -2472,6 +2480,7 @@ di.ObjectFactory class
 di.ObjectFactory.getInstanceByKey method
 di.TypeFactory typedef
 di.Visibility typedef
+di.lastKeyId getter
 route-client library
 route-client.Routable class
 route-client.Routable.configureRoute method
