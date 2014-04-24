@@ -9491,29 +9491,30 @@ v=b.hC(z)
 u=v.length===0?null:C.Nm.grZ(v)
 t=u==null?J.pN(z):J.pN(u)
 return[t.Ar(this.VR),b]},
-Ww:function(a,b){var z,y,x,w,v,u,t,s
-z=this.n2(a,b)
-y=C.Nm.gFV(z)
-x=C.Nm.grZ(z)
-w=J.x(a)
-if(w.n(a,y)!==!0||!b.n(0,x))return this.ny(this.iZ(x))
-if(a!=null&&w.n(a,this.uB)!==!0){J.GZ(window.document.querySelector("#dartdoc-main"),!0)
-this.stZ(a)}w=b.dU
-this.VY=w==null?"":C.xB.g("@",w)
-w=this.NR
-v=P.hK(window.location.href)
-u=v.r0
-t=v.tP
-if(t!=="")u=H.d(u)+"?"+t
-t=v.Ka
-if(t!=="")u=H.d(u)+"#"+t
-s=J.U6(u).u8(u,"@")
-if(s>0)u=C.xB.Nj(u,0,s)
-if(w.U3!==u){w.U3=u
-t=$.LX()
-if(J.UQ(t,"ga")!=null){w=P.EF(["page",w.U3],null,null)
-t.K9("ga",["send","pageview",P.fn(P.M0(w))])}}w=b.dU
-this.jU(w==null?"":C.xB.g("@",w))
+Ww:function(a,b){var z,y,x,w,v,u,t,s,r,q
+y=this.n2(a,b)
+x=C.Nm.gFV(y)
+w=C.Nm.grZ(y)
+v=J.x(a)
+if(v.n(a,x)!==!0||!b.n(0,w))return this.ny(this.iZ(w))
+if(a!=null&&v.n(a,this.uB)!==!0){z=window.document.querySelector("#dartdoc-main")
+try{J.GZ(z,!0)}catch(u){if(!!J.x(H.Ru(u)).$isGe)P.JS("Catching and ignoring an error on hideOrShowNavigation")
+else throw u}this.stZ(a)}v=b.dU
+this.VY=v==null?"":C.xB.g("@",v)
+v=this.NR
+t=P.hK(window.location.href)
+s=t.r0
+r=t.tP
+if(r!=="")s=H.d(s)+"?"+r
+r=t.Ka
+if(r!=="")s=H.d(s)+"#"+r
+q=J.U6(s).u8(s,"@")
+if(q>0)s=C.xB.Nj(s,0,q)
+if(v.U3!==s){v.U3=s
+r=$.LX()
+if(J.UQ(r,"ga")!=null){v=P.EF(["page",v.U3],null,null)
+r.K9("ga",["send","pageview",P.fn(P.M0(v))])}}v=b.dU
+this.jU(v==null?"":C.xB.g("@",v))
 return P.lA(!0,null)},
 FY:function(a){var z,y,x,w,v
 if(a.rh==null)return a
@@ -9587,21 +9588,23 @@ ny:function(a){var z,y,x,w
 z=new Y.Mm(null,null,null,null,null)
 z.rm(P.pE(a,C.dy,!1))
 if(J.de(z.oH,"home")===!0){this.Ww(this.VR,z)
-return P.lA(!0,null)}J.oH(this.gQc().style,"")
+return P.lA(!0,null)}if(this.gQc()!=null)J.oH(this.gQc().style,"")
 y=this.Gc(z)
 x=this.gmk()
 w=$.X3
 w.toString
 y.au(H.VM(new P.vs(0,w,null,null,null,null,null,x),[H.Kp(y,0)]))
 return y},
-gQc:function(){var z=this.ja
+gQc:function(){var z,y
+z=this.ja
 if(z==null){z=$.Ro
 if(z==null){z=document.querySelector("#dartdoc-main")
 $.Ro=z}z.toString
-z=(z.shadowRoot||z.webkitShadowRoot).querySelector("#loading-indicator")
+y=z.shadowRoot||z.webkitShadowRoot
+if(y==null)return
+z=y.querySelector("#loading-indicator")
 this.ja=z}return z},
-e0:[function(){J.oH(this.gQc().style,"none")
-return"none"},"$0","gmk",0,0,93],
+e0:[function(){if(this.gQc()!=null)J.oH(this.gQc().style,"none")},"$0","gmk",0,0,131],
 Mt:function(){P.pH([W.Kn(P.jW(C.VC,"docs/library_list.json",C.dy,!1),null,null).ml(new Y.QG(this)),W.Kn(P.jW(C.VC,"docs/index.json",C.dy,!1),null,null).ml(new Y.iP())],!1).ml(new Y.Ex(this))
 this.y8(null)
 var z=H.VM(new W.RO(window,C.IU.Ph,!1),[null])

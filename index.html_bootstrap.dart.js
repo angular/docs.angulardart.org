@@ -16474,29 +16474,30 @@ z=this.VR
 v=b.xd(0,z)
 u=v==null?J.pN(z):J.pN(v)
 return[u.Ar(this.VR),b]},
-Ww:function(a,b){var z,y,x,w,v,u,t,s
-z=this.ll(a,b)
-y=C.Nm.gtH(z)
-x=C.Nm.grZ(z)
-w=J.x(a)
-if(w.n(a,y)!==!0||!b.n(0,x))return this.bE(this.iZ(x))
-if(a!=null&&w.n(a,this.uB)!==!0){J.GZ(window.document.querySelector("#dartdoc-main"),!0)
-this.stZ(a)}w=b.dU
-this.VY=w==null?"":C.xB.g("@",w)
-w=this.NR
-v=P.hK(window.location.href)
-u=v.r0
-t=v.tP
-if(t!=="")u=H.d(u)+"?"+t
-t=v.Ka
-if(t!=="")u=H.d(u)+"#"+t
-s=J.U6(u).u8(u,"@")
-if(s>0)u=C.xB.Nj(u,0,s)
-if(w.cH!==u){w.cH=u
-t=$.LX()
-if(J.UQ(t,"ga")!=null){w=P.EF(["page",w.cH],null,null)
-t.K9("ga",["send","pageview",P.ND(P.M0(w))])}}w=b.dU
-this.jU(w==null?"":C.xB.g("@",w))
+Ww:function(a,b){var z,y,x,w,v,u,t,s,r,q
+y=this.ll(a,b)
+x=C.Nm.gtH(y)
+w=C.Nm.grZ(y)
+v=J.x(a)
+if(v.n(a,x)!==!0||!b.n(0,w))return this.bE(this.iZ(w))
+if(a!=null&&v.n(a,this.uB)!==!0){z=window.document.querySelector("#dartdoc-main")
+try{J.GZ(z,!0)}catch(u){if(!!J.x(H.Ru(u)).$isGe)P.JS("Catching and ignoring an error on hideOrShowNavigation")
+else throw u}this.stZ(a)}v=b.dU
+this.VY=v==null?"":C.xB.g("@",v)
+v=this.NR
+t=P.hK(window.location.href)
+s=t.r0
+r=t.tP
+if(r!=="")s=H.d(s)+"?"+r
+r=t.Ka
+if(r!=="")s=H.d(s)+"#"+r
+q=J.U6(s).u8(s,"@")
+if(q>0)s=C.xB.Nj(s,0,q)
+if(v.cH!==s){v.cH=s
+r=$.LX()
+if(J.UQ(r,"ga")!=null){v=P.EF(["page",v.cH],null,null)
+r.K9("ga",["send","pageview",P.ND(P.M0(v))])}}v=b.dU
+this.jU(v==null?"":C.xB.g("@",v))
 return P.lA(!0,null)},
 FY:function(a){var z,y,x,w,v
 if(a.rh==null)return a
@@ -16570,7 +16571,7 @@ bE:function(a){var z,y,x,w
 z=new Y.Qb(null,null,null,null,null)
 z.rm(P.pE(a,C.dy,!1))
 if(J.de(z.oH,"home")===!0){this.Ww(this.VR,z)
-return P.lA(!0,null)}J.oH(this.gC1().style,"")
+return P.lA(!0,null)}if(this.gC1()!=null)J.oH(this.gC1().style,"")
 y=this.bt(z)
 x=this.gMT()
 w=$.X3
@@ -16590,14 +16591,16 @@ L9:[function(a){var z=this.bC
 this.bC=F.it(this,C.RR,z,z!==!0)},"$0","gdh",0,0,107],
 Pi:[function(a){var z=this.J8
 this.J8=F.it(this,C.N5,z,z!==!0)},"$0","gzb",0,0,107],
-gC1:function(){var z=this.ja
+gC1:function(){var z,y
+z=this.ja
 if(z==null){z=$.Ro
 if(z==null){z=document.querySelector("#dartdoc-main")
 $.Ro=z}z.toString
-z=(z.shadowRoot||z.webkitShadowRoot).querySelector("#loading-indicator")
+y=z.shadowRoot||z.webkitShadowRoot
+if(y==null)return
+z=y.querySelector("#loading-indicator")
 this.ja=z}return z},
-e0:[function(){J.oH(this.gC1().style,"none")
-return"none"},"$0","gMT",0,0,108],
+e0:[function(){if(this.gC1()!=null)J.oH(this.gC1().style,"none")},"$0","gMT",0,0,107],
 Mt:function(){P.pH([W.Kn(P.jW(C.VC,"docs/library_list.json",C.dy,!1),null,null).ml(new Y.QG(this)),W.Kn(P.jW(C.VC,"docs/index.json",C.dy,!1),null,null).ml(new Y.iP())],!1).ml(new Y.Ex(this))
 this.y8(null)
 var z=H.K6(new W.RO(window,C.IU.Ph,!1),[null])
