@@ -155,7 +155,7 @@ HT:{
 "^":"a;tT"}}],["_interceptors","dart:_interceptors",,J,{
 "^":"",
 x:[function(a){return void 0},"$1","DK",2,0,null,0],
-Qu:[function(a,b,c,d){return{i: a, p: b, e: c, x: d}},"$4","Wm",8,0,null,1,2,3,4],
+Qu:[function(a,b,c,d){return{i:a,p:b,e:c,x:d}},"$4","Wm",8,0,null,1,2,3,4],
 ks:[function(a){var z,y,x,w
 z=a[init.dispatchPropertyName]
 if(z==null)if($.Bv==null){H.XD()
@@ -479,7 +479,7 @@ if(init.globalState.EF===!0)return H.mf()
 return},"$0","yX",0,0,null],
 mf:[function(){var z,y
 z=new Error().stack
-if(z==null){z=(function() {try { throw new Error() } catch(e) { return e.stack }})()
+if(z==null){z=function(){try{throw new Error()}catch(x){return x.stack}}()
 if(z==null)throw H.b(P.f("No stack trace"))}y=z.match(new RegExp("^ *at [^(]*\\((.*):[0-9]*:[0-9]*\\)$","m"))
 if(y!=null)return y[1]
 y=z.match(new RegExp("^[^@]*@(.*):[0-9]*$","m"))
@@ -516,7 +516,7 @@ k=y.t(z,"startPaused")
 y=y.t(z,"replyPort")
 if(m==null)m=$.Cl()
 j=new Worker(m)
-j.onmessage=function(e) { H.Mg(j, e); }
+j.onmessage=function(c,d){return function(e){c(d,e)}}(H.Mg,j)
 i=init.globalState.Y7++
 $.F0().u(0,j,i)
 init.globalState.XC.u(0,i,j)
@@ -593,9 +593,9 @@ this.i2=P.L5(null,null,null,J.im,H.AD)
 this.XC=P.L5(null,null,null,J.im,null)
 if(this.EF===!0){z=new H.JH()
 this.vd=z
-w=function (e) { H.Mg(z, e); }
+w=function(b,c){return function(d){b(c,d)}}(H.Mg,z)
 $.jk().onmessage=w
-$.jk().dartPrint = function (object) {}}}},
+$.jk().dartPrint=function(b){}}}},
 AD:{
 "^":"a;jO>,Gx,fW,En<,EE<,Qy,PX,UF<,C9<,lJ,Jp,M2,mf,pa",
 v8:function(a,b){if(!this.Qy.n(0,a))return
@@ -1049,13 +1049,11 @@ z=parseFloat(a)
 if(isNaN(z)){y=C.xB.bS(a)
 if(y==="NaN"||y==="+NaN"||y==="-NaN")return z
 return b.$1(a)}return z},"$2","b3",4,0,null,24,26],
-lh:[function(a){var z,y,x
+lh:[function(a){var z,y
 z=C.AS(J.x(a))
 if(z==="Object"){y=String(a.constructor).match(/^\s*function\s*(\S*)\s*\(/)[1]
-if(typeof y==="string")z=y}x=J.rY(z)
-if(x.j(z,0)===36)z=x.yn(z,1)
-x=H.oX(a)
-return H.d(z)+H.ia(x,0,null)},"$1","Ig",2,0,null,0],
+if(typeof y==="string")z=/^\w+$/.test(y)?y:z}if(z.length>1&&C.xB.j(z,0)===36)z=C.xB.yn(z,1)
+return z+H.ia(H.oX(a),0,null)},"$1","Ig",2,0,null,0],
 a5:[function(a){return"Instance of '"+H.lh(a)+"'"},"$1","jb",2,0,null,0],
 VK:[function(a){var z,y,x,w,v,u
 z=a.length
@@ -1127,7 +1125,7 @@ b:[function(a){var z
 if(a==null)a=new P.LK()
 z=new Error()
 z.dartException=a
-if("defineProperty" in Object){Object.defineProperty(z, "message", { get: H.Ju })
+if("defineProperty" in Object){Object.defineProperty(z,"message",{get:H.Ju})
 z.name=""}else z.toString=H.Ju
 return z},"$1","BF",2,0,null,36],
 Ju:[function(){return J.AG(this.dartException)},"$0","Eu",0,0,null],
@@ -1189,7 +1187,7 @@ tR:[function(a,b){var z
 if(a==null)return
 z=a.$identity
 if(!!z)return z
-z=(function(closure, arity, context, invoke) {  return function(a1, a2, a3, a4) {     return invoke(closure, context, arity, a1, a2, a3, a4);  };})(a,b,init.globalState.N0,H.ft)
+z=function(c,d,e,f){return function(g,h,i,j){return f(c,e,d,g,h,i,j)}}(a,b,init.globalState.N0,H.ft)
 a.$identity=z
 return z},"$2","qN",4,0,null,40,46],
 Md:[function(a,b,c,d,e,f){var z,y,x,w,v,u,t,s,r,q,p,o,n,m
@@ -1201,7 +1199,7 @@ x=H.zh(z).AM
 w=d?Object.create(new H.Bp().constructor.prototype):Object.create(new H.v(null,null,null,null).constructor.prototype)
 w.$initialize=w.constructor
 if(d)v=function(){this.$initialize()}
-else if(typeof dart_precompiled=="function"){u=function(a,b,c,d) {this.$initialize(a,b,c,d)}
+else if(typeof dart_precompiled=="function"){u=function(g,h,i,j){this.$initialize(g,h,i,j)}
 v=u}else{u=$.OK
 $.OK=J.WB(u,1)
 u=new Function("a","b","c","d","this.$initialize(a,b,c,d);"+u)
@@ -1212,9 +1210,9 @@ if(u){t=e.length==1&&!0
 s=H.CW(a,z,t)
 s.$reflectionInfo=c}else{w.$name=f
 s=z
-t=!1}if(typeof x=="number")r=(function(s){return function(){return init.metadata[s]}})(x)
+t=!1}if(typeof x=="number")r=function(g){return function(){return init.metadata[g]}}(x)
 else if(u&&typeof x=="function"){q=t?H.yS:H.eZ
-r=function(f,r){return function(){return f.apply({$receiver:r(this)},arguments)}}(x,q)}else throw H.b("Error in reflectionInfo.")
+r=function(g,h){return function(){return g.apply({$receiver:h(this)},arguments)}}(x,q)}else throw H.b("Error in reflectionInfo.")
 w.$signature=r
 w[y]=s
 for(u=b.length,p=1;p<u;++p){o=b[p]
@@ -1223,13 +1221,13 @@ if(n!=null){m=d?o:H.CW(a,o,t)
 w[n]=m}}w["call*"]=s
 return v},"$6","cN",12,0,null,31,47,48,49,50,51],
 vq:[function(a,b,c,d){var z=H.eZ
-switch(b?-1:a){case 0:return function(n,S){return function(){return S(this)[n]()}}(c,z)
-case 1:return function(n,S){return function(a){return S(this)[n](a)}}(c,z)
-case 2:return function(n,S){return function(a,b){return S(this)[n](a,b)}}(c,z)
-case 3:return function(n,S){return function(a,b,c){return S(this)[n](a,b,c)}}(c,z)
-case 4:return function(n,S){return function(a,b,c,d){return S(this)[n](a,b,c,d)}}(c,z)
-case 5:return function(n,S){return function(a,b,c,d,e){return S(this)[n](a,b,c,d,e)}}(c,z)
-default:return function(f,s){return function(){return f.apply(s(this),arguments)}}(d,z)}},"$4","X5",8,0,null,46,52,53,9],
+switch(b?-1:a){case 0:return function(e,f){return function(){return f(this)[e]()}}(c,z)
+case 1:return function(e,f){return function(g){return f(this)[e](g)}}(c,z)
+case 2:return function(e,f){return function(g,h){return f(this)[e](g,h)}}(c,z)
+case 3:return function(e,f){return function(g,h,i){return f(this)[e](g,h,i)}}(c,z)
+case 4:return function(e,f){return function(g,h,i,j){return f(this)[e](g,h,i,j)}}(c,z)
+case 5:return function(e,f){return function(g,h,i,j,k){return f(this)[e](g,h,i,j,k)}}(c,z)
+default:return function(e,f){return function(){return e.apply(f(this),arguments)}}(d,z)}},"$4","X5",8,0,null,46,52,53,9],
 CW:[function(a,b,c){var z,y,x,w,v,u
 if(c)return H.Hf(a,b)
 z=b.$stubName
@@ -1254,13 +1252,15 @@ Z4:[function(a,b,c,d){var z,y
 z=H.eZ
 y=H.yS
 switch(b?-1:a){case 0:throw H.b(H.Pa("Intercepted function with no arguments."))
-case 1:return function(n,s,r){return function(){return s(this)[n](r(this))}}(c,z,y)
-case 2:return function(n,s,r){return function(a){return s(this)[n](r(this),a)}}(c,z,y)
-case 3:return function(n,s,r){return function(a,b){return s(this)[n](r(this),a,b)}}(c,z,y)
-case 4:return function(n,s,r){return function(a,b,c){return s(this)[n](r(this),a,b,c)}}(c,z,y)
-case 5:return function(n,s,r){return function(a,b,c,d){return s(this)[n](r(this),a,b,c,d)}}(c,z,y)
-case 6:return function(n,s,r){return function(a,b,c,d,e){return s(this)[n](r(this),a,b,c,d,e)}}(c,z,y)
-default:return function(f,s,r,a){return function(){a=[r(this)];Array.prototype.push.apply(a,arguments);return f.apply(s(this),a)}}(d,z,y)}},"$4","bs",8,0,null,46,52,55,9],
+case 1:return function(e,f,g){return function(){return f(this)[e](g(this))}}(c,z,y)
+case 2:return function(e,f,g){return function(h){return f(this)[e](g(this),h)}}(c,z,y)
+case 3:return function(e,f,g){return function(h,i){return f(this)[e](g(this),h,i)}}(c,z,y)
+case 4:return function(e,f,g){return function(h,i,j){return f(this)[e](g(this),h,i,j)}}(c,z,y)
+case 5:return function(e,f,g){return function(h,i,j,k){return f(this)[e](g(this),h,i,j,k)}}(c,z,y)
+case 6:return function(e,f,g){return function(h,i,j,k,l){return f(this)[e](g(this),h,i,j,k,l)}}(c,z,y)
+default:return function(e,f,g,h){return function(){h=[g(this)]
+Array.prototype.push.apply(h,arguments)
+return e.apply(f(this),h)}}(d,z,y)}},"$4","bs",8,0,null,46,52,55,9],
 Hf:[function(a,b){var z,y,x,w,v,u,t,s
 z=H.oN()
 y=$.P4
@@ -1392,17 +1392,17 @@ ml:[function(a,b,c){return a.apply(b,c)},"$3","Ra",6,0,null,9,31,72],
 or:[function(a){var z=$.NF
 return"Instance of "+(z==null?"<Unknown>":z.$1(a))},"$1","ln",2,0,null,79],
 bw:[function(a){return H.eQ(a)},"$1","b9",2,0,null,0],
-iw:[function(a,b,c){Object.defineProperty(a, b, {value: c, enumerable: false, writable: true, configurable: true})},"$3","k0",6,0,null,79,57,22],
+iw:[function(a,b,c){Object.defineProperty(a,b,{value:c,enumerable:false,writable:true,configurable:true})},"$3","k0",6,0,null,79,57,22],
 Gz:[function(a){var z,y,x,w,v,u
 z=$.NF.$1(a)
 y=$.nw[z]
-if(y!=null){Object.defineProperty(a, init.dispatchPropertyName, {value: y, enumerable: false, writable: true, configurable: true})
+if(y!=null){Object.defineProperty(a,init.dispatchPropertyName,{value:y,enumerable:false,writable:true,configurable:true})
 return y.i}x=$.vv[z]
 if(x!=null)return x
 w=init.interceptorsByTag[z]
 if(w==null){z=$.TX.$2(a,z)
 if(z!=null){y=$.nw[z]
-if(y!=null){Object.defineProperty(a, init.dispatchPropertyName, {value: y, enumerable: false, writable: true, configurable: true})
+if(y!=null){Object.defineProperty(a,init.dispatchPropertyName,{value:y,enumerable:false,writable:true,configurable:true})
 return y.i}x=$.vv[z]
 if(x!=null)return x
 w=init.interceptorsByTag[z]}}if(w==null)return
@@ -1410,19 +1410,19 @@ x=w.prototype
 v=z[0]
 if(v==="!"){y=H.Va(x)
 $.nw[z]=y
-Object.defineProperty(a, init.dispatchPropertyName, {value: y, enumerable: false, writable: true, configurable: true})
+Object.defineProperty(a,init.dispatchPropertyName,{value:y,enumerable:false,writable:true,configurable:true})
 return y.i}if(v==="~"){$.vv[z]=x
 return x}if(v==="-"){u=H.Va(x)
-Object.defineProperty(Object.getPrototypeOf(a), init.dispatchPropertyName, {value: u, enumerable: false, writable: true, configurable: true})
+Object.defineProperty(Object.getPrototypeOf(a),init.dispatchPropertyName,{value:u,enumerable:false,writable:true,configurable:true})
 return u.i}if(v==="+")return H.Lc(a,x)
 if(v==="*")throw H.b(P.SY(z))
 if(init.leafTags[z]===true){u=H.Va(x)
-Object.defineProperty(Object.getPrototypeOf(a), init.dispatchPropertyName, {value: u, enumerable: false, writable: true, configurable: true})
+Object.defineProperty(Object.getPrototypeOf(a),init.dispatchPropertyName,{value:u,enumerable:false,writable:true,configurable:true})
 return u.i}else return H.Lc(a,x)},"$1","ca",2,0,null,79],
 Lc:[function(a,b){var z,y
 z=Object.getPrototypeOf(a)
 y=J.Qu(b,z,null,null)
-Object.defineProperty(z, init.dispatchPropertyName, {value: y, enumerable: false, writable: true, configurable: true})
+Object.defineProperty(z,init.dispatchPropertyName,{value:y,enumerable:false,writable:true,configurable:true})
 return b},"$2","qF",4,0,null,79,1],
 Va:[function(a){return J.Qu(a,!1,null,!!a.$isXj)},"$1","VD",2,0,null,1],
 ow:[function(a,b,c){var z=b.prototype
@@ -1441,7 +1441,7 @@ if(typeof window!="undefined"){window
 for(x=0;x<y.length;++x){w=y[x]
 v=$.x7.$1(w)
 if(v!=null){u=H.ow(w,z[w],v)
-if(u!=null)Object.defineProperty(v, init.dispatchPropertyName, {value: u, enumerable: false, writable: true, configurable: true})}}}for(x=0;x<y.length;++x){w=y[x]
+if(u!=null)Object.defineProperty(v,init.dispatchPropertyName,{value:u,enumerable:false,writable:true,configurable:true})}}}for(x=0;x<y.length;++x){w=y[x]
 if(/^[A-Za-z_]/.test(w)){t=z[w]
 z["!"+w]=t
 z["~"+w]=t
@@ -1595,7 +1595,7 @@ x=this.EP
 if(x!==-1)y.receiver=z[x+1]
 return y},
 static:{"^":"lm,k1,Re,fN,qi,rZ,BX,tt,dt,A7",cM:[function(a){var z,y,x,w,v,u
-a=a.replace(String({}), '$receiver$').replace(new RegExp("[[\\]{}()*+?.\\\\^$|]",'g'),'\\$&')
+a=a.replace(String({}),'$receiver$').replace(new RegExp("[[\\]{}()*+?.\\\\^$|]",'g'),'\\$&')
 z=a.match(/\\\$[a-zA-Z]+\\\$/g)
 if(z==null)z=[]
 y=z.indexOf("\\$arguments\\$")
@@ -1603,20 +1603,8 @@ x=z.indexOf("\\$argumentsExpr\\$")
 w=z.indexOf("\\$expr\\$")
 v=z.indexOf("\\$method\\$")
 u=z.indexOf("\\$receiver\\$")
-return new H.Zr(a.replace('\\$arguments\\$','((?:x|[^x])*)').replace('\\$argumentsExpr\\$','((?:x|[^x])*)').replace('\\$expr\\$','((?:x|[^x])*)').replace('\\$method\\$','((?:x|[^x])*)').replace('\\$receiver\\$','((?:x|[^x])*)'),y,x,w,v,u)},"$1","uN",2,0,null,16],S7:[function(a){return function($expr$) {
-  var $argumentsExpr$ = '$arguments$'
-  try {
-    $expr$.$method$($argumentsExpr$);
-  } catch (e) {
-    return e.message;
-  }
-}(a)},"$1","LS",2,0,null,37],Mj:[function(a){return function($expr$) {
-  try {
-    $expr$.$method$;
-  } catch (e) {
-    return e.message;
-  }
-}(a)},"$1","pp",2,0,null,37]}},
+return new H.Zr(a.replace('\\$arguments\\$','((?:x|[^x])*)').replace('\\$argumentsExpr\\$','((?:x|[^x])*)').replace('\\$expr\\$','((?:x|[^x])*)').replace('\\$method\\$','((?:x|[^x])*)').replace('\\$receiver\\$','((?:x|[^x])*)'),y,x,w,v,u)},"$1","uN",2,0,null,16],S7:[function(a){return function(b){var $argumentsExpr$='$arguments$'
+try{b.$method$($argumentsExpr$)}catch(z){return z.message}}(a)},"$1","LS",2,0,null,37],Mj:[function(a){return function(b){try{b.$method$}catch(z){return z.message}}(a)},"$1","pp",2,0,null,37]}},
 W0:{
 "^":"Ge;V7,Ga",
 bu:function(a){var z=this.Ga
@@ -1721,7 +1709,7 @@ return z==null?!1:H.Ly(z,this.za())},
 rP:function(a){var z=J.x(a)
 return"$signature" in z?z.$signature():null},
 za:function(){var z,y,x,w,v,u,t
-z={ "func": "dynafunc" }
+z={func:"dynafunc"}
 y=this.dw
 x=J.x(y)
 if(!!x.$isnr)z.void=true
@@ -1828,7 +1816,7 @@ static:{v4:[function(a,b,c,d){var z,y,x,w,v
 z=b?"m":""
 y=c?"":"i"
 x=d?"g":""
-w=(function() {try {return new RegExp(a, z + y + x);} catch (e) {return e;}})()
+w=function(){try{return new RegExp(a,z+y+x)}catch(u){return u}}()
 if(w instanceof RegExp)return w
 v=String(w)
 throw H.b(P.rr("Illegal RegExp pattern: "+a+", "+v))},"$4","ka",8,0,null,84,85,86,87]}},
@@ -2960,13 +2948,8 @@ bu:function(a){return"Symbol(\""+H.d(this.fN)+"\")"},
 $iswv:true,
 static:{"^":"bj,ES,qu,KG,nc,fb"}}}],["dart._js_names","dart:_js_names",,H,{
 "^":"",
-kU:[function(a){var z=H.VM((function(victim, hasOwnProperty) {
-  var result = [];
-  for (var key in victim) {
-    if (hasOwnProperty.call(victim, key)) result.push(key);
-  }
-  return result;
-})(a, Object.prototype.hasOwnProperty),[null])
+kU:[function(a){var z=H.VM(function(b,c){var y=[]
+for(var x in b){if(c.call(b,x))y.push(x)}return y}(a,Object.prototype.hasOwnProperty),[null])
 z.fixed$length=init
 return z},"$1","Im",2,0,null,122]}],["dart.async","dart:async",,P,{
 "^":"",
@@ -6383,7 +6366,7 @@ if(b===!0){z=[c]
 C.Nm.Ay(z,d)
 d=z}return P.wY(H.Ek(a,P.F(J.kl(d,P.Xl()),!0,null),P.Te(null)))},"$4","kV",8,0,null,124,180,143,72],
 Dm:[function(a,b,c){var z
-if(Object.isExtensible(a))try{Object.defineProperty(a, b, { value: c})
+if(Object.isExtensible(a))try{Object.defineProperty(a,b,{value:c})
 return!0}catch(z){H.Ru(z)}return!1},"$3","Iy",6,0,null,182,55,22],
 Jk:[function(a,b){if(Object.prototype.hasOwnProperty.call(a,b))return a[b]
 return},"$2","np",4,0,null,182,55],
@@ -6476,7 +6459,7 @@ $isQV:true,
 $asQV:null},
 DV:{
 "^":"Tp:183;",
-$1:[function(a){var z=function(_call, f, captureThis) {return function() {return _call(f, captureThis, this, Array.prototype.slice.apply(arguments));}}(P.R4, a, !1)
+$1:[function(a){var z=function(b,c,d){return function(){return b(c,d,this,Array.prototype.slice.apply(arguments))}}(P.R4,a,!1)
 P.Dm(z,$.Dp(),a)
 return z},"$1",null,2,0,null,182,"call"],
 $isEH:true},
@@ -6731,7 +6714,7 @@ qw:[function(a){if(typeof dartPrint=="function"){dartPrint(a)
 return}if(typeof console=="object"&&typeof console.log=="function"){console.log(a)
 return}if(typeof window=="object")return
 if(typeof print=="function"){print(a)
-return}throw "Unable to print message: " + String(a)},"$1","ah",2,0,null,6]}],["dartdoc_viewer.analytics","package:dartdoc_viewer/analytics.dart",,K,{
+return}throw"Unable to print message: "+String(a)},"$1","ah",2,0,null,6]}],["dartdoc_viewer.analytics","package:dartdoc_viewer/analytics.dart",,K,{
 "^":"",
 Ab:{
 "^":"a;U3"}}],["dartdoc_viewer.web.index_html_0","file:///home/travis/build/angular/angular.dart/dartdoc-viewer/client/web/index.html.0.dart",,L,{
@@ -10323,58 +10306,34 @@ $.ax=0
 $.Oo=null
 $.Ro=null
 $.mW=null
-I.$lazy($,"globalThis","DX","jk",function(){return function() { return this; }()})
+I.$lazy($,"globalThis","DX","jk",function(){return function(){return this}()})
 I.$lazy($,"globalWindow","cO","A0",function(){return $.jk().window})
 I.$lazy($,"globalWorker","zA","Nl",function(){return $.jk().Worker})
 I.$lazy($,"globalPostMessageDefined","Da","JU",function(){return $.jk().postMessage!==void 0})
 I.$lazy($,"thisScript","Kb","Cl",function(){return H.Td()})
 I.$lazy($,"workerIds","rS","F0",function(){return H.VM(new P.kM(null),[J.im])})
-I.$lazy($,"noSuchMethodPattern","lm","WD",function(){return H.cM(H.S7({ toString: function() { return "$receiver$"; } }))})
-I.$lazy($,"notClosurePattern","k1","OI",function(){return H.cM(H.S7({ $method$: null, toString: function() { return "$receiver$"; } }))})
+I.$lazy($,"noSuchMethodPattern","lm","WD",function(){return H.cM(H.S7({toString:function(){return"$receiver$"}}))})
+I.$lazy($,"notClosurePattern","k1","OI",function(){return H.cM(H.S7({$method$:null,toString:function(){return"$receiver$"}}))})
 I.$lazy($,"nullCallPattern","Re","PH",function(){return H.cM(H.S7(null))})
-I.$lazy($,"nullLiteralCallPattern","fN","D1",function(){return H.cM(function() {
-  var $argumentsExpr$ = '$arguments$'
-  try {
-    null.$method$($argumentsExpr$);
-  } catch (e) {
-    return e.message;
-  }
-}())})
+I.$lazy($,"nullLiteralCallPattern","fN","D1",function(){return H.cM(function(){var $argumentsExpr$='$arguments$'
+try{null.$method$($argumentsExpr$)}catch(z){return z.message}}())})
 I.$lazy($,"undefinedCallPattern","qi","rx",function(){return H.cM(H.S7(void 0))})
-I.$lazy($,"undefinedLiteralCallPattern","rZ","Kr",function(){return H.cM(function() {
-  var $argumentsExpr$ = '$arguments$'
-  try {
-    (void 0).$method$($argumentsExpr$);
-  } catch (e) {
-    return e.message;
-  }
-}())})
+I.$lazy($,"undefinedLiteralCallPattern","rZ","Kr",function(){return H.cM(function(){var $argumentsExpr$='$arguments$'
+try{(void 0).$method$($argumentsExpr$)}catch(z){return z.message}}())})
 I.$lazy($,"nullPropertyPattern","BX","zO",function(){return H.cM(H.Mj(null))})
-I.$lazy($,"nullLiteralPropertyPattern","tt","Bi",function(){return H.cM(function() {
-  try {
-    null.$method$;
-  } catch (e) {
-    return e.message;
-  }
-}())})
+I.$lazy($,"nullLiteralPropertyPattern","tt","Bi",function(){return H.cM(function(){try{null.$method$}catch(z){return z.message}}())})
 I.$lazy($,"undefinedPropertyPattern","dt","eA",function(){return H.cM(H.Mj(void 0))})
-I.$lazy($,"undefinedLiteralPropertyPattern","A7","ko",function(){return H.cM(function() {
-  try {
-    (void 0).$method$;
-  } catch (e) {
-    return e.message;
-  }
-}())})
+I.$lazy($,"undefinedLiteralPropertyPattern","A7","ko",function(){return H.cM(function(){try{(void 0).$method$}catch(z){return z.message}}())})
 I.$lazy($,"_toStringList","Ml","RM",function(){return[]})
 I.$lazy($,"scheduleImmediateClosure","lI","ej",function(){return P.xg()})
 I.$lazy($,"_toStringVisiting","d2","hi",function(){return P.zM(null)})
 I.$lazy($,"_toStringList","yu","tw",function(){return[]})
 I.$lazy($,"_HEIGHT","aR","OS",function(){return["top","bottom"]})
 I.$lazy($,"_WIDTH","y5","Mv",function(){return["right","left"]})
-I.$lazy($,"context","eo","LX",function(){return P.fn(function() { return this; }())})
+I.$lazy($,"context","eo","LX",function(){return P.fn(function(){return this}())})
 I.$lazy($,"_DART_OBJECT_PROPERTY_NAME","kt","Iq",function(){return init.getIsolateTag("_$dart_dartObject")})
 I.$lazy($,"_DART_CLOSURE_PROPERTY_NAME","Ri","Dp",function(){return init.getIsolateTag("_$dart_dartClosure")})
-I.$lazy($,"_dartProxyCtor","Je","hs",function(){return function DartObject(o) { this.o = o; }})
+I.$lazy($,"_dartProxyCtor","Je","hs",function(){return function DartObject(a){this.o=a}})
 I.$lazy($,"pageIndex","No","aQ",function(){return P.Fl(null,null)})
 I.$lazy($,"packageMatch","l2","xv",function(){return new H.VR(H.v4("(\\w+)/",!1,!0,!1),null,null)})
 I.$lazy($,"libraryMatch","Wq","o1",function(){return new H.VR(H.v4("([\\w\\-\\:]+)",!1,!0,!1),null,null)})
@@ -10567,7 +10526,7 @@ var x={}
 a[c]=y
 a[d]=function(){var w=$[c]
 try{if(w===y){$[c]=x
-try{w=$[c]=e()}finally{if(w===y){if($[c]===x){$[c]=null}}}}else{if(w===x)H.ag(b)}return w}finally{$[d]=function(){return this[c]}}}}
+try{w=$[c]=e()}finally{if(w===y)if($[c]===x)$[c]=null}}else{if(w===x)H.ag(b)}return w}finally{$[d]=function(){return this[c]}}}}
 I.$finishIsolateConstructor=function(a){var y=a.p
 function Isolate(){var x=Object.prototype.hasOwnProperty
 for(var w in y)if(x.call(y,w))this[w]=y[w]

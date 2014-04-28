@@ -155,7 +155,7 @@ FK2:{
 "^":"a;tT"}}],["_interceptors","dart:_interceptors",,J,{
 "^":"",
 x:[function(a){return void 0},"$1","DK",2,0,null,0],
-Qu:[function(a,b,c,d){return{i: a, p: b, e: c, x: d}},"$4","Wm",8,0,null,1,2,3,4],
+Qu:[function(a,b,c,d){return{i:a,p:b,e:c,x:d}},"$4","Wm",8,0,null,1,2,3,4],
 ks:[function(a){var z,y,x,w
 z=a[init.dispatchPropertyName]
 if(z==null)if($.Bv==null){H.XD()
@@ -567,7 +567,7 @@ if(init.globalState.EF===!0)return H.cL()
 return},"$0","dYB",0,0,null],
 cL:[function(){var z,y
 z=new Error().stack
-if(z==null){z=(function() {try { throw new Error() } catch(e) { return e.stack }})()
+if(z==null){z=function(){try{throw new Error()}catch(x){return x.stack}}()
 if(z==null)throw H.b(P.f("No stack trace"))}y=z.match(new RegExp("^ *at [^(]*\\((.*):[0-9]*:[0-9]*\\)$","m"))
 if(y!=null)return y[1]
 y=z.match(new RegExp("^[^@]*@(.*):[0-9]*$","m"))
@@ -604,7 +604,7 @@ k=y.t(z,"startPaused")
 y=y.t(z,"replyPort")
 if(m==null)m=$.rk()
 j=new Worker(m)
-j.onmessage=function(e) { H.Mg(j, e); }
+j.onmessage=function(c,d){return function(e){c(d,e)}}(H.Mg,j)
 i=init.globalState.Y7++
 $.AW().u(0,j,i)
 init.globalState.XC.u(0,i,j)
@@ -681,9 +681,9 @@ this.i2=P.L5(null,null,null,J.im,H.OE)
 this.XC=P.L5(null,null,null,J.im,null)
 if(this.EF===!0){z=new H.JHn()
 this.rj=z
-w=function (e) { H.Mg(z, e); }
+w=function(b,c){return function(d){b(c,d)}}(H.Mg,z)
 $.jk().onmessage=w
-$.jk().dartPrint = function (object) {}}}},
+$.jk().dartPrint=function(b){}}}},
 OE:{
 "^":"a;jO>,A4,fW,En<,EE<,Qy,uZ,UF<,C9<,lJ,Jp,M2,Ji,pa",
 V0:function(a,b){if(!this.Qy.n(0,a))return
@@ -1156,13 +1156,11 @@ z=parseFloat(a)
 if(isNaN(z)){y=J.Q7(a)
 if(y==="NaN"||y==="+NaN"||y==="-NaN")return z
 return b.$1(a)}return z},"$2","j0",4,0,null,26,28],
-lh:[function(a){var z,y,x
+lh:[function(a){var z,y
 z=C.AS(J.x(a))
 if(z==="Object"){y=String(a.constructor).match(/^\s*function\s*(\S*)\s*\(/)[1]
-if(typeof y==="string")z=y}x=J.NH(z)
-if(x.j(z,0)===36)z=x.yn(z,1)
-x=H.oX(a)
-return H.d(z)+H.ia(x,0,null)},"$1","Ig",2,0,null,0],
+if(typeof y==="string")z=/^\w+$/.test(y)?y:z}if(z.length>1&&C.xB.j(z,0)===36)z=C.xB.yn(z,1)
+return z+H.ia(H.oX(a),0,null)},"$1","Ig",2,0,null,0],
 a5:[function(a){return"Instance of '"+H.lh(a)+"'"},"$1","U54",2,0,null,0],
 Ms:[function(){if(typeof window!="undefined"&&window!==null){var z=window.performance
 if(z!=null&&typeof z.webkitNow=="function")return C.CD.yu(Math.floor(1000*z.webkitNow()))}return 1000*Date.now()},"$0","id",0,0,null],
@@ -1251,7 +1249,7 @@ b:[function(a){var z
 if(a==null)a=new P.LK()
 z=new Error()
 z.dartException=a
-if("defineProperty" in Object){Object.defineProperty(z, "message", { get: H.Ju })
+if("defineProperty" in Object){Object.defineProperty(z,"message",{get:H.Ju})
 z.name=""}else z.toString=H.Ju
 return z},"$1","Cr",2,0,null,46],
 Ju:[function(){return J.AG(this.dartException)},"$0","Eu",0,0,null],
@@ -1313,7 +1311,7 @@ tR:[function(a,b){var z
 if(a==null)return
 z=a.$identity
 if(!!z)return z
-z=(function(closure, arity, context, invoke) {  return function(a1, a2, a3, a4) {     return invoke(closure, context, arity, a1, a2, a3, a4);  };})(a,b,init.globalState.N0,H.ft)
+z=function(c,d,e,f){return function(g,h,i,j){return f(c,e,d,g,h,i,j)}}(a,b,init.globalState.N0,H.ft)
 a.$identity=z
 return z},"$2","YE",4,0,null,50,56],
 HA:[function(a,b,c,d,e,f){var z,y,x,w,v,u,t,s,r,q,p,o,n,m
@@ -1325,7 +1323,7 @@ x=H.aj(z).AM
 w=d?Object.create(new H.Bp().constructor.prototype):Object.create(new H.v(null,null,null,null).constructor.prototype)
 w.$initialize=w.constructor
 if(d)v=function(){this.$initialize()}
-else if(typeof dart_precompiled=="function"){u=function(a,b,c,d) {this.$initialize(a,b,c,d)}
+else if(typeof dart_precompiled=="function"){u=function(g,h,i,j){this.$initialize(g,h,i,j)}
 v=u}else{u=$.fo
 $.fo=J.WB(u,1)
 u=new Function("a","b","c","d","this.$initialize(a,b,c,d);"+u)
@@ -1336,9 +1334,9 @@ if(u){t=e.length==1&&!0
 s=H.SD(a,z,t)
 s.$reflectionInfo=c}else{w.$name=f
 s=z
-t=!1}if(typeof x=="number")r=(function(s){return function(){return init.metadata[s]}})(x)
+t=!1}if(typeof x=="number")r=function(g){return function(){return init.metadata[g]}}(x)
 else if(u&&typeof x=="function"){q=t?H.yS:H.w7
-r=function(f,r){return function(){return f.apply({$receiver:r(this)},arguments)}}(x,q)}else throw H.b("Error in reflectionInfo.")
+r=function(g,h){return function(){return g.apply({$receiver:h(this)},arguments)}}(x,q)}else throw H.b("Error in reflectionInfo.")
 w.$signature=r
 w[y]=s
 for(u=b.length,p=1;p<u;++p){o=b[p]
@@ -1347,13 +1345,13 @@ if(n!=null){m=d?o:H.SD(a,o,t)
 w[n]=m}}w["call*"]=s
 return v},"$6","SM",12,0,null,41,57,58,59,60,61],
 vq:[function(a,b,c,d){var z=H.w7
-switch(b?-1:a){case 0:return function(n,S){return function(){return S(this)[n]()}}(c,z)
-case 1:return function(n,S){return function(a){return S(this)[n](a)}}(c,z)
-case 2:return function(n,S){return function(a,b){return S(this)[n](a,b)}}(c,z)
-case 3:return function(n,S){return function(a,b,c){return S(this)[n](a,b,c)}}(c,z)
-case 4:return function(n,S){return function(a,b,c,d){return S(this)[n](a,b,c,d)}}(c,z)
-case 5:return function(n,S){return function(a,b,c,d,e){return S(this)[n](a,b,c,d,e)}}(c,z)
-default:return function(f,s){return function(){return f.apply(s(this),arguments)}}(d,z)}},"$4","Eb",8,0,null,56,62,63,11],
+switch(b?-1:a){case 0:return function(e,f){return function(){return f(this)[e]()}}(c,z)
+case 1:return function(e,f){return function(g){return f(this)[e](g)}}(c,z)
+case 2:return function(e,f){return function(g,h){return f(this)[e](g,h)}}(c,z)
+case 3:return function(e,f){return function(g,h,i){return f(this)[e](g,h,i)}}(c,z)
+case 4:return function(e,f){return function(g,h,i,j){return f(this)[e](g,h,i,j)}}(c,z)
+case 5:return function(e,f){return function(g,h,i,j,k){return f(this)[e](g,h,i,j,k)}}(c,z)
+default:return function(e,f){return function(){return e.apply(f(this),arguments)}}(d,z)}},"$4","Eb",8,0,null,56,62,63,11],
 SD:[function(a,b,c){var z,y,x,w,v,u
 if(c)return H.HfE(a,b)
 z=b.$stubName
@@ -1378,13 +1376,15 @@ Z4:[function(a,b,c,d){var z,y
 z=H.w7
 y=H.yS
 switch(b?-1:a){case 0:throw H.b(H.Pa("Intercepted function with no arguments."))
-case 1:return function(n,s,r){return function(){return s(this)[n](r(this))}}(c,z,y)
-case 2:return function(n,s,r){return function(a){return s(this)[n](r(this),a)}}(c,z,y)
-case 3:return function(n,s,r){return function(a,b){return s(this)[n](r(this),a,b)}}(c,z,y)
-case 4:return function(n,s,r){return function(a,b,c){return s(this)[n](r(this),a,b,c)}}(c,z,y)
-case 5:return function(n,s,r){return function(a,b,c,d){return s(this)[n](r(this),a,b,c,d)}}(c,z,y)
-case 6:return function(n,s,r){return function(a,b,c,d,e){return s(this)[n](r(this),a,b,c,d,e)}}(c,z,y)
-default:return function(f,s,r,a){return function(){a=[r(this)];Array.prototype.push.apply(a,arguments);return f.apply(s(this),a)}}(d,z,y)}},"$4","VT",8,0,null,56,62,6,11],
+case 1:return function(e,f,g){return function(){return f(this)[e](g(this))}}(c,z,y)
+case 2:return function(e,f,g){return function(h){return f(this)[e](g(this),h)}}(c,z,y)
+case 3:return function(e,f,g){return function(h,i){return f(this)[e](g(this),h,i)}}(c,z,y)
+case 4:return function(e,f,g){return function(h,i,j){return f(this)[e](g(this),h,i,j)}}(c,z,y)
+case 5:return function(e,f,g){return function(h,i,j,k){return f(this)[e](g(this),h,i,j,k)}}(c,z,y)
+case 6:return function(e,f,g){return function(h,i,j,k,l){return f(this)[e](g(this),h,i,j,k,l)}}(c,z,y)
+default:return function(e,f,g,h){return function(){h=[g(this)]
+Array.prototype.push.apply(h,arguments)
+return e.apply(f(this),h)}}(d,z,y)}},"$4","VT",8,0,null,56,62,6,11],
 HfE:[function(a,b){var z,y,x,w,v,u,t,s
 z=H.bO()
 y=$.P4
@@ -1534,17 +1534,17 @@ ml:[function(a,b,c){return a.apply(b,c)},"$3","lv",6,0,null,11,41,82],
 U6j:[function(a){var z=$.nw
 return"Instance of "+(z==null?"<Unknown>":z.$1(a))},"$1","E1",2,0,null,93],
 Su:[function(a){return H.eQ(a)},"$1","av",2,0,null,0],
-hL:[function(a,b,c){Object.defineProperty(a, b, {value: c, enumerable: false, writable: true, configurable: true})},"$3","HT",6,0,null,93,66,24],
+hL:[function(a,b,c){Object.defineProperty(a,b,{value:c,enumerable:false,writable:true,configurable:true})},"$3","HT",6,0,null,93,66,24],
 Am:[function(a){var z,y,x,w,v,u
 z=$.nw.$1(a)
 y=$.q4[z]
-if(y!=null){Object.defineProperty(a, init.dispatchPropertyName, {value: y, enumerable: false, writable: true, configurable: true})
+if(y!=null){Object.defineProperty(a,init.dispatchPropertyName,{value:y,enumerable:false,writable:true,configurable:true})
 return y.i}x=$.vv[z]
 if(x!=null)return x
 w=init.interceptorsByTag[z]
 if(w==null){z=$.TX.$2(a,z)
 if(z!=null){y=$.q4[z]
-if(y!=null){Object.defineProperty(a, init.dispatchPropertyName, {value: y, enumerable: false, writable: true, configurable: true})
+if(y!=null){Object.defineProperty(a,init.dispatchPropertyName,{value:y,enumerable:false,writable:true,configurable:true})
 return y.i}x=$.vv[z]
 if(x!=null)return x
 w=init.interceptorsByTag[z]}}if(w==null)return
@@ -1552,19 +1552,19 @@ x=w.prototype
 v=z[0]
 if(v==="!"){y=H.Va(x)
 $.q4[z]=y
-Object.defineProperty(a, init.dispatchPropertyName, {value: y, enumerable: false, writable: true, configurable: true})
+Object.defineProperty(a,init.dispatchPropertyName,{value:y,enumerable:false,writable:true,configurable:true})
 return y.i}if(v==="~"){$.vv[z]=x
 return x}if(v==="-"){u=H.Va(x)
-Object.defineProperty(Object.getPrototypeOf(a), init.dispatchPropertyName, {value: u, enumerable: false, writable: true, configurable: true})
+Object.defineProperty(Object.getPrototypeOf(a),init.dispatchPropertyName,{value:u,enumerable:false,writable:true,configurable:true})
 return u.i}if(v==="+")return H.Lc(a,x)
 if(v==="*")throw H.b(P.nO(z))
 if(init.leafTags[z]===true){u=H.Va(x)
-Object.defineProperty(Object.getPrototypeOf(a), init.dispatchPropertyName, {value: u, enumerable: false, writable: true, configurable: true})
+Object.defineProperty(Object.getPrototypeOf(a),init.dispatchPropertyName,{value:u,enumerable:false,writable:true,configurable:true})
 return u.i}else return H.Lc(a,x)},"$1","Dw",2,0,null,93],
 Lc:[function(a,b){var z,y
 z=Object.getPrototypeOf(a)
 y=J.Qu(b,z,null,null)
-Object.defineProperty(z, init.dispatchPropertyName, {value: y, enumerable: false, writable: true, configurable: true})
+Object.defineProperty(z,init.dispatchPropertyName,{value:y,enumerable:false,writable:true,configurable:true})
 return b},"$2","G8",4,0,null,93,1],
 Va:[function(a){return J.Qu(a,!1,null,!!a.$isXj)},"$1","VD",2,0,null,1],
 ow:[function(a,b,c){var z=b.prototype
@@ -1583,7 +1583,7 @@ if(typeof window!="undefined"){window
 for(x=0;x<y.length;++x){w=y[x]
 v=$.x7.$1(w)
 if(v!=null){u=H.ow(w,z[w],v)
-if(u!=null)Object.defineProperty(v, init.dispatchPropertyName, {value: u, enumerable: false, writable: true, configurable: true})}}}for(x=0;x<y.length;++x){w=y[x]
+if(u!=null)Object.defineProperty(v,init.dispatchPropertyName,{value:u,enumerable:false,writable:true,configurable:true})}}}for(x=0;x<y.length;++x){w=y[x]
 if(/^[A-Za-z_]/.test(w)){t=z[w]
 z["!"+w]=t
 z["~"+w]=t
@@ -1773,7 +1773,7 @@ x=this.EP
 if(x!==-1)y.receiver=z[x+1]
 return y},
 static:{"^":"lm,k1,Re,fN,qi,cz,BX,tt,dt,A7",cM:[function(a){var z,y,x,w,v,u
-a=a.replace(String({}), '$receiver$').replace(new RegExp("[[\\]{}()*+?.\\\\^$|]",'g'),'\\$&')
+a=a.replace(String({}),'$receiver$').replace(new RegExp("[[\\]{}()*+?.\\\\^$|]",'g'),'\\$&')
 z=a.match(/\\\$[a-zA-Z]+\\\$/g)
 if(z==null)z=[]
 y=z.indexOf("\\$arguments\\$")
@@ -1781,20 +1781,8 @@ x=z.indexOf("\\$argumentsExpr\\$")
 w=z.indexOf("\\$expr\\$")
 v=z.indexOf("\\$method\\$")
 u=z.indexOf("\\$receiver\\$")
-return new H.Zr(a.replace('\\$arguments\\$','((?:x|[^x])*)').replace('\\$argumentsExpr\\$','((?:x|[^x])*)').replace('\\$expr\\$','((?:x|[^x])*)').replace('\\$method\\$','((?:x|[^x])*)').replace('\\$receiver\\$','((?:x|[^x])*)'),y,x,w,v,u)},"$1","cP",2,0,null,18],S7:[function(a){return function($expr$) {
-  var $argumentsExpr$ = '$arguments$'
-  try {
-    $expr$.$method$($argumentsExpr$);
-  } catch (e) {
-    return e.message;
-  }
-}(a)},"$1","Dn",2,0,null,47],Mj:[function(a){return function($expr$) {
-  try {
-    $expr$.$method$;
-  } catch (e) {
-    return e.message;
-  }
-}(a)},"$1","TzB",2,0,null,47]}},
+return new H.Zr(a.replace('\\$arguments\\$','((?:x|[^x])*)').replace('\\$argumentsExpr\\$','((?:x|[^x])*)').replace('\\$expr\\$','((?:x|[^x])*)').replace('\\$method\\$','((?:x|[^x])*)').replace('\\$receiver\\$','((?:x|[^x])*)'),y,x,w,v,u)},"$1","cP",2,0,null,18],S7:[function(a){return function(b){var $argumentsExpr$='$arguments$'
+try{b.$method$($argumentsExpr$)}catch(z){return z.message}}(a)},"$1","Dn",2,0,null,47],Mj:[function(a){return function(b){try{b.$method$}catch(z){return z.message}}(a)},"$1","TzB",2,0,null,47]}},
 W0:{
 "^":"Ge;V7,Ga",
 bu:function(a){var z=this.Ga
@@ -1901,7 +1889,7 @@ return z==null?!1:H.Ly(z,this.za())},
 rP:function(a){var z=J.x(a)
 return"$signature" in z?z.$signature():null},
 za:function(){var z,y,x,w,v,u,t
-z={ "func": "dynafunc" }
+z={func:"dynafunc"}
 y=this.dw
 x=J.x(y)
 if(!!x.$isnr)z.void=true
@@ -2039,7 +2027,7 @@ static:{v4:[function(a,b,c,d){var z,y,x,w,v
 z=b?"m":""
 y=c?"":"i"
 x=d?"g":""
-w=(function() {try {return new RegExp(a, z + y + x);} catch (e) {return e;}})()
+w=function(){try{return new RegExp(a,z+y+x)}catch(u){return u}}()
 if(w instanceof RegExp)return w
 v=String(w)
 throw H.b(P.cD("Illegal RegExp pattern: "+a+", "+v))},"$4","HU",8,0,null,98,99,100,101]}},
@@ -4268,13 +4256,8 @@ $iswv:true,
 $isGD:true,
 static:{"^":"RWj,z3,quP,KGP,q3,fbV"}}}],["dart._js_names","dart:_js_names",,H,{
 "^":"",
-kU:[function(a){var z=H.K6((function(victim, hasOwnProperty) {
-  var result = [];
-  for (var key in victim) {
-    if (hasOwnProperty.call(victim, key)) result.push(key);
-  }
-  return result;
-})(a, Object.prototype.hasOwnProperty),[null])
+kU:[function(a){var z=H.K6(function(b,c){var y=[]
+for(var x in b){if(c.call(b,x))y.push(x)}return y}(a,Object.prototype.hasOwnProperty),[null])
 z.fixed$length=init
 return z},"$1","DF",2,0,null,137]}],["dart.async","dart:async",,P,{
 "^":"",
@@ -8270,23 +8253,11 @@ this.oB(a,W.VF(new W.op(y)))
 return y.MM},
 gmW:function(a){return a.location},
 oB:function(a,b){return a.requestAnimationFrame(H.tR(b,1))},
-pl:function(a){if(!!(a.requestAnimationFrame&&a.cancelAnimationFrame))return
-  (function($this) {
-   var vendors = ['ms', 'moz', 'webkit', 'o'];
-   for (var i = 0; i < vendors.length && !$this.requestAnimationFrame; ++i) {
-     $this.requestAnimationFrame = $this[vendors[i] + 'RequestAnimationFrame'];
-     $this.cancelAnimationFrame =
-         $this[vendors[i]+'CancelAnimationFrame'] ||
-         $this[vendors[i]+'CancelRequestAnimationFrame'];
-   }
-   if ($this.requestAnimationFrame && $this.cancelAnimationFrame) return;
-   $this.requestAnimationFrame = function(callback) {
-      return window.setTimeout(function() {
-        callback(Date.now());
-      }, 16 /* 16ms ~= 60fps */);
-   };
-   $this.cancelAnimationFrame = function(id) { clearTimeout(id); }
-  })(a)},
+pl:function(a){if(!!(a.requestAnimationFrame&&a.cancelAnimationFrame))return;(function(b){var z=['ms','moz','webkit','o']
+for(var y=0;y<z.length&&!b.requestAnimationFrame;++y){b.requestAnimationFrame=b[z[y]+'RequestAnimationFrame']
+b.cancelAnimationFrame=b[z[y]+'CancelAnimationFrame']||b[z[y]+'CancelRequestAnimationFrame']}if(b.requestAnimationFrame&&b.cancelAnimationFrame)return
+b.requestAnimationFrame=function(c){return window.setTimeout(function(){c(Date.now())},16)}
+b.cancelAnimationFrame=function(c){clearTimeout(c)}})(a)},
 geT:function(a){return W.Pv(a.parent)},
 xO:function(a){return a.close()},
 oz:function(a,b,c,d){a.scrollBy(b,c)
@@ -9092,7 +9063,7 @@ gl:function(){return this.QZ}},
 zZ:{
 "^":"TpZ:201;a,b",
 $1:[function(a){var z=H.Va(this.b)
-Object.defineProperty(a, init.dispatchPropertyName, {value: z, enumerable: false, writable: true, configurable: true})
+Object.defineProperty(a,init.dispatchPropertyName,{value:z,enumerable:false,writable:true,configurable:true})
 a.constructor=a.__proto__.constructor
 return this.a(a)},"$1",null,2,0,null,41,"call"],
 $isEH:true},
@@ -9268,13 +9239,13 @@ wC:{
 $iswC:true,
 static:{lx:function(){return new H.iV((Math.random()*0x100000000>>>0)+(Math.random()*0x100000000>>>0)*4294967296)}}}}],["dart.js","dart:js",,P,{
 "^":"",
-xZ:[function(a,b){return function(_call, f, captureThis) {return function() {return _call(f, captureThis, this, Array.prototype.slice.apply(arguments));}}(P.R4, a, b)},"$2$captureThis","Kc",2,3,null,142,117,207],
+xZ:[function(a,b){return function(c,d,e){return function(){return c(d,e,this,Array.prototype.slice.apply(arguments))}}(P.R4,a,b)},"$2$captureThis","Kc",2,3,null,142,117,207],
 R4:[function(a,b,c,d){var z
 if(b===!0){z=[c]
 C.Nm.FV(z,d)
 d=z}return P.wY(H.Ek(a,P.F(J.kl(d,P.Xl()),!0,null),P.Te(null)))},"$4","jO",8,0,null,139,207,157,82],
 Dm:[function(a,b,c){var z
-if(Object.isExtensible(a))try{Object.defineProperty(a, b, { value: c})
+if(Object.isExtensible(a))try{Object.defineProperty(a,b,{value:c})
 return!0}catch(z){H.Ru(z)}return!1},"$3","Bk",6,0,null,91,6,24],
 Om:[function(a,b){if(Object.prototype.hasOwnProperty.call(a,b))return a[b]
 return},"$2","Uh",4,0,null,91,6],
@@ -9771,7 +9742,7 @@ qw:[function(a){if(typeof dartPrint=="function"){dartPrint(a)
 return}if(typeof console=="object"&&typeof console.log=="function"){console.log(a)
 return}if(typeof window=="object")return
 if(typeof print=="function"){print(a)
-return}throw "Unable to print message: " + String(a)},"$1","Kg",2,0,null,8]}],["dartdoc_viewer.analytics","package:dartdoc_viewer/analytics.dart",,K,{
+return}throw"Unable to print message: "+String(a)},"$1","Kg",2,0,null,8]}],["dartdoc_viewer.analytics","package:dartdoc_viewer/analytics.dart",,K,{
 "^":"",
 Ab:{
 "^":"a;cH"}}],["dartdoc_viewer.web.index_html_0","file:///home/travis/build/angular/angular.dart/dartdoc-viewer/client/web/index.html.0.dart",,L,{
@@ -13560,30 +13531,14 @@ w=z==null
 if(w){if(J.de(r,"HTMLElement")!==!0)H.vh(P.f("Class must provide extendsTag if base native class is not HtmlElement"))}else if(!(x.createElement(z) instanceof window[r]))H.vh(P.f("extendsTag does not match base native class"))
 q=v[r]
 p={}
-p.createdCallback={value: ((function(invokeCallback) {
-             return function() {
-               return invokeCallback(this);
-             };
-          })(H.tR(W.v8(s,t),1)))}
-p.attachedCallback={value: ((function(invokeCallback) {
-             return function() {
-               return invokeCallback(this);
-             };
-          })(H.tR(W.KR(),1)))}
-p.detachedCallback={value: ((function(invokeCallback) {
-             return function() {
-               return invokeCallback(this);
-             };
-          })(H.tR(W.v1(),1)))}
-p.attributeChangedCallback={value: ((function(invokeCallback) {
-             return function(arg1, arg2, arg3) {
-               return invokeCallback(this, arg1, arg2, arg3);
-             };
-          })(H.tR(W.A6(),4)))}
+p.createdCallback={value:function(b){return function(){return b(this)}}(H.tR(W.v8(s,t),1))}
+p.attachedCallback={value:function(b){return function(){return b(this)}}(H.tR(W.KR(),1))}
+p.detachedCallback={value:function(b){return function(){return b(this)}}(H.tR(W.v1(),1))}
+p.attributeChangedCallback={value:function(b){return function(c,d,e){return b(this,c,d,e)}}(H.tR(W.A6(),4))}
 o=Object.create(q.prototype,p)
 v=H.Va(t)
-Object.defineProperty(o, init.dispatchPropertyName, {value: v, enumerable: false, writable: true, configurable: true})
-n={prototype: o}
+Object.defineProperty(o,init.dispatchPropertyName,{value:v,enumerable:false,writable:true,configurable:true})
+n={prototype:o}
 if(!w)n.extends=z
 x.registerElement(a,n)},
 SD:function(a){var z,y,x,w,v,u,t,s,r
@@ -19739,48 +19694,24 @@ $.Ro=null
 $.vU=null
 $.mW=null
 $.Au=[C.rc,W.qE,{},C.zw,A.JM,{created:A.X9},C.Jx,X.Zs,{created:X.R7},C.LV,M.xA,{created:M.oj},C.RB,T.on,{created:T.B9},C.BD,E.aS,{created:E.u67},C.Ii,W.Wy,{},C.WD4,H.Da,{"":H.DP},C.mP,N.UX,{created:N.EK4},C.QN,E.jN,{created:E.pR},C.Im,X.D9,{created:X.Wt},C.Hj,Z.YQ,{created:Z.kg},C.Rp,W.yyN,{},C.hG,A.ir,{created:A.G7},C.VJ,U.bn,{created:U.nf},C.Pc,Z.yw,{created:Z.oW},C.qF,N.l6,{created:N.Ui},C.ul,U.n3,{created:U.pB},C.Br,S.cZ,{created:S.ak},C.uZ,W.Gh,{},C.H9,Q.Og,{created:Q.Xa},C.NF,G.J0,{created:G.p4},C.Wg,F.Wi,{created:F.GVW},C.Wf,U.Sb,{created:U.PS},C.Od,O.PR,{created:O.Hr},C.elb,H.dF,{"":H.UI},C.ky,G.oe,{created:G.o6},C.qY,Q.eJ,{created:Q.pF6},C.b9,U.xN,{created:U.Ih},C.Db,E.Y7,{created:E.CI},C.qu,Y.nD,{created:Y.JR},C.Zk,O.SB,{created:O.qBo},C.xiu,H.XU,{"":H.hV},C.Qm,M.W3,{created:M.n0c},C.Zg,W.uEY,{}]
-I.$lazy($,"globalThis","DX","jk",function(){return function() { return this; }()})
+I.$lazy($,"globalThis","DX","jk",function(){return function(){return this}()})
 I.$lazy($,"globalWindow","vQ","Kjr",function(){return $.jk().window})
 I.$lazy($,"globalWorker","uj","X8",function(){return $.jk().Worker})
 I.$lazy($,"globalPostMessageDefined","AJ","jo",function(){return $.jk().postMessage!==void 0})
 I.$lazy($,"thisScript","Kb","rk",function(){return H.yl()})
 I.$lazy($,"workerIds","rS","AW",function(){return H.K6(new P.Nt(null),[J.im])})
-I.$lazy($,"noSuchMethodPattern","lm","WD",function(){return H.cM(H.S7({ toString: function() { return "$receiver$"; } }))})
-I.$lazy($,"notClosurePattern","k1","nX",function(){return H.cM(H.S7({ $method$: null, toString: function() { return "$receiver$"; } }))})
+I.$lazy($,"noSuchMethodPattern","lm","WD",function(){return H.cM(H.S7({toString:function(){return"$receiver$"}}))})
+I.$lazy($,"notClosurePattern","k1","nX",function(){return H.cM(H.S7({$method$:null,toString:function(){return"$receiver$"}}))})
 I.$lazy($,"nullCallPattern","Re","PH",function(){return H.cM(H.S7(null))})
-I.$lazy($,"nullLiteralCallPattern","fN","D1",function(){return H.cM(function() {
-  var $argumentsExpr$ = '$arguments$'
-  try {
-    null.$method$($argumentsExpr$);
-  } catch (e) {
-    return e.message;
-  }
-}())})
+I.$lazy($,"nullLiteralCallPattern","fN","D1",function(){return H.cM(function(){var $argumentsExpr$='$arguments$'
+try{null.$method$($argumentsExpr$)}catch(z){return z.message}}())})
 I.$lazy($,"undefinedCallPattern","qi","rx",function(){return H.cM(H.S7(void 0))})
-I.$lazy($,"undefinedLiteralCallPattern","cz","kQ",function(){return H.cM(function() {
-  var $argumentsExpr$ = '$arguments$'
-  try {
-    (void 0).$method$($argumentsExpr$);
-  } catch (e) {
-    return e.message;
-  }
-}())})
+I.$lazy($,"undefinedLiteralCallPattern","cz","kQ",function(){return H.cM(function(){var $argumentsExpr$='$arguments$'
+try{(void 0).$method$($argumentsExpr$)}catch(z){return z.message}}())})
 I.$lazy($,"nullPropertyPattern","BX","zO",function(){return H.cM(H.Mj(null))})
-I.$lazy($,"nullLiteralPropertyPattern","tt","Bi",function(){return H.cM(function() {
-  try {
-    null.$method$;
-  } catch (e) {
-    return e.message;
-  }
-}())})
+I.$lazy($,"nullLiteralPropertyPattern","tt","Bi",function(){return H.cM(function(){try{null.$method$}catch(z){return z.message}}())})
 I.$lazy($,"undefinedPropertyPattern","dt","eA",function(){return H.cM(H.Mj(void 0))})
-I.$lazy($,"undefinedLiteralPropertyPattern","A7","ko",function(){return H.cM(function() {
-  try {
-    (void 0).$method$;
-  } catch (e) {
-    return e.message;
-  }
-}())})
+I.$lazy($,"undefinedLiteralPropertyPattern","A7","ko",function(){return H.cM(function(){try{(void 0).$method$}catch(z){return z.message}}())})
 I.$lazy($,"_toStringList","Ml","RM",function(){return[]})
 I.$lazy($,"scheduleImmediateClosure","lI","ej",function(){return P.C2()})
 I.$lazy($,"_toStringVisiting","xg","xb",function(){return P.yv(null)})
@@ -19792,10 +19723,10 @@ I.$lazy($,"_allowedElements","zX","AM",function(){var z=P.Ls(null,null,null,null
 z.FV(0,["A","ABBR","ACRONYM","ADDRESS","AREA","ARTICLE","ASIDE","AUDIO","B","BDI","BDO","BIG","BLOCKQUOTE","BR","BUTTON","CANVAS","CAPTION","CENTER","CITE","CODE","COL","COLGROUP","COMMAND","DATA","DATALIST","DD","DEL","DETAILS","DFN","DIR","DIV","DL","DT","EM","FIELDSET","FIGCAPTION","FIGURE","FONT","FOOTER","FORM","H1","H2","H3","H4","H5","H6","HEADER","HGROUP","HR","I","IFRAME","IMG","INPUT","INS","KBD","LABEL","LEGEND","LI","MAP","MARK","MENU","METER","NAV","NOBR","OL","OPTGROUP","OPTION","OUTPUT","P","PRE","PROGRESS","Q","S","SAMP","SECTION","SELECT","SMALL","SOURCE","SPAN","STRIKE","STRONG","SUB","SUMMARY","SUP","TABLE","TBODY","TD","TEXTAREA","TFOOT","TH","THEAD","TIME","TR","TRACK","TT","U","UL","VAR","VIDEO","WBR"])
 return z})
 I.$lazy($,"_attributeValidators","or","NJ",function(){return P.Fl(null,null)})
-I.$lazy($,"context","eo","LX",function(){return P.ND(function() { return this; }())})
+I.$lazy($,"context","eo","LX",function(){return P.ND(function(){return this}())})
 I.$lazy($,"_DART_OBJECT_PROPERTY_NAME","kt","QL",function(){return init.getIsolateTag("_$dart_dartObject")})
 I.$lazy($,"_DART_CLOSURE_PROPERTY_NAME","Ri","Dp",function(){return init.getIsolateTag("_$dart_dartClosure")})
-I.$lazy($,"_dartProxyCtor","Je","hs",function(){return function DartObject(o) { this.o = o; }})
+I.$lazy($,"_dartProxyCtor","Je","hs",function(){return function DartObject(a){this.o=a}})
 I.$lazy($,"pageIndex","No","aQ",function(){return P.Fl(null,null)})
 I.$lazy($,"packageMatch","l2","kA",function(){return new H.VR(H.v4("(\\w+)/",!1,!0,!1),null,null)})
 I.$lazy($,"libraryMatch","D3","Nn",function(){return new H.VR(H.v4("([\\w\\-\\:]+)",!1,!0,!1),null,null)})
@@ -20033,7 +19964,7 @@ var x={}
 a[c]=y
 a[d]=function(){var w=$[c]
 try{if(w===y){$[c]=x
-try{w=$[c]=e()}finally{if(w===y){if($[c]===x){$[c]=null}}}}else{if(w===x)H.ag(b)}return w}finally{$[d]=function(){return this[c]}}}}
+try{w=$[c]=e()}finally{if(w===y)if($[c]===x)$[c]=null}}else{if(w===x)H.ag(b)}return w}finally{$[d]=function(){return this[c]}}}}
 I.$finishIsolateConstructor=function(a){var y=a.p
 function Isolate(){var x=Object.prototype.hasOwnProperty
 for(var w in y)if(x.call(y,w))this[w]=y[w]

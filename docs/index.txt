@@ -78,6 +78,8 @@ angular-animate.LoopedAnimation class
 angular-animate.LoopedAnimation.read method
 angular-animate.LoopedAnimation.update method
 angular-animate.Module class
+angular-animate.Module.bind method
+angular-animate.Module.bindByKey method
 angular-animate.Module.bindings getter
 angular-animate.Module.factory method
 angular-animate.Module.factoryByKey method
@@ -125,6 +127,8 @@ angular-app.Application.createInjector method
 angular-app.Application.run method
 angular-app.Application.selector method
 angular-app.Module class
+angular-app.Module.bind method
+angular-app.Module.bindByKey method
 angular-app.Module.bindings getter
 angular-app.Module.factory method
 angular-app.Module.factoryByKey method
@@ -562,6 +566,8 @@ angular-directive.InputTextLike.scope property
 angular-directive.InputTextLike.typedValue getter
 angular-directive.InputTextLike.typedValue= setter
 angular-directive.Module class
+angular-directive.Module.bind method
+angular-directive.Module.bindByKey method
 angular-directive.Module.bindings getter
 angular-directive.Module.factory method
 angular-directive.Module.factoryByKey method
@@ -1524,6 +1530,8 @@ angular-mock.MockWindow.onHashChangeController property
 angular-mock.MockWindow.onPopState getter
 angular-mock.MockWindow.onPopStateController property
 angular-mock.Module class
+angular-mock.Module.bind method
+angular-mock.Module.bindByKey method
 angular-mock.Module.bindings getter
 angular-mock.Module.factory method
 angular-mock.Module.factoryByKey method
@@ -1804,6 +1812,8 @@ angular-perf.DevToolsTimelineProfiler.prefix property
 angular-perf.DevToolsTimelineProfiler.startTimer method
 angular-perf.DevToolsTimelineProfiler.stopTimer method
 angular-perf.Module class
+angular-perf.Module.bind method
+angular-perf.Module.bindByKey method
 angular-perf.Module.bindings getter
 angular-perf.Module.factory method
 angular-perf.Module.factoryByKey method
@@ -1825,6 +1835,8 @@ angular-routing library
 angular-routing.DetachAware class
 angular-routing.DetachAware.detach method
 angular-routing.Module class
+angular-routing.Module.bind method
+angular-routing.Module.bindByKey method
 angular-routing.Module.bindings getter
 angular-routing.Module.factory method
 angular-routing.Module.factoryByKey method
@@ -2450,8 +2462,6 @@ di.Injector.createChild method
 di.Injector.get method
 di.Injector.getByKey method
 di.Injector.name getter
-di.Injector.newFromParent method
-di.Injector.newInstanceOf method
 di.Injector.parent getter
 di.Injector.root getter
 di.Injector.types getter
@@ -2466,6 +2476,8 @@ di.Key.id property
 di.Key.toString method
 di.Key.type property
 di.Module class
+di.Module.bind method
+di.Module.bindByKey method
 di.Module.bindings getter
 di.Module.factory method
 di.Module.factoryByKey method
@@ -2476,11 +2488,8 @@ di.Module.typeFactories= setter
 di.Module.value method
 di.NoProviderError class
 di.NoProviderError.NoProviderError- constructor
-di.ObjectFactory class
-di.ObjectFactory.getInstanceByKey method
 di.TypeFactory typedef
 di.Visibility typedef
-di.lastKeyId getter
 route-client library
 route-client.Routable class
 route-client.Routable.configureRoute method
