@@ -496,6 +496,7 @@ angular-core.VmTurnZone class
 angular-core.VmTurnZone.VmTurnZone- constructor
 angular-core.VmTurnZone.assertInTurn method
 angular-core.VmTurnZone.assertInZone method
+angular-core.VmTurnZone.defaultOnScheduleMicrotask property
 angular-core.VmTurnZone.onError property
 angular-core.VmTurnZone.onTurnDone property
 angular-core.VmTurnZone.onTurnStart property
