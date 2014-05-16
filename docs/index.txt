@@ -948,6 +948,8 @@ angular-formatter.Date.call method
 angular-formatter.Filter class
 angular-formatter.Filter.Filter- constructor
 angular-formatter.Filter.call method
+angular-formatter.FormatterModule class
+angular-formatter.FormatterModule.FormatterModule- constructor
 angular-formatter.Json class
 angular-formatter.Json.call method
 angular-formatter.LimitTo class
@@ -955,6 +957,17 @@ angular-formatter.LimitTo.LimitTo- constructor
 angular-formatter.LimitTo.call method
 angular-formatter.Lowercase class
 angular-formatter.Lowercase.call method
+angular-formatter.Module class
+angular-formatter.Module.bind method
+angular-formatter.Module.bindByKey method
+angular-formatter.Module.bindings getter
+angular-formatter.Module.factory method
+angular-formatter.Module.factoryByKey method
+angular-formatter.Module.install method
+angular-formatter.Module.type method
+angular-formatter.Module.typeFactories getter
+angular-formatter.Module.typeFactories= setter
+angular-formatter.Module.value method
 angular-formatter.Number class
 angular-formatter.Number.call method
 angular-formatter.OrderBy class
