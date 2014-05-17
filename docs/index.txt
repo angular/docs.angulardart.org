@@ -515,10 +515,10 @@ angular-directive.ContentEditable class
 angular-directive.ContentEditable.ContentEditable- constructor
 angular-directive.ContentEditable.typedValue getter
 angular-directive.ContentEditable.typedValue= setter
-angular-directive.DecoratorFormatter class
-angular-directive.DecoratorFormatter.DecoratorFormatter- constructor
 angular-directive.DetachAware class
 angular-directive.DetachAware.detach method
+angular-directive.DirectiveModule class
+angular-directive.DirectiveModule.DirectiveModule- constructor
 angular-directive.InputCheckbox class
 angular-directive.InputCheckbox.InputCheckbox- constructor
 angular-directive.InputCheckbox.inputElement property
