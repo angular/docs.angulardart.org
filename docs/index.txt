@@ -480,6 +480,7 @@ angular-core.ViewCache.fromUrl method
 angular-core.ViewCache.http property
 angular-core.ViewCache.templateCache property
 angular-core.ViewCache.treeSanitizer property
+angular-core.ViewCache.viewFactoryCache property
 angular-core.ViewFactory class
 angular-core.ViewFactory.bind method
 angular-core.ViewFactory.call method
@@ -1536,6 +1537,11 @@ angular-mock.MockProgressEvent.timeStamp property
 angular-mock.MockProgressEvent.total property
 angular-mock.MockProgressEvent.totalSize property
 angular-mock.MockProgressEvent.type property
+angular-mock.MockWebPlatform class
+angular-mock.MockWebPlatform.cssShimRequired getter
+angular-mock.MockWebPlatform.shadowDomShimRequired getter
+angular-mock.MockWebPlatform.shimCss method
+angular-mock.MockWebPlatform.shimShadowDom method
 angular-mock.MockWindow class
 angular-mock.MockWindow.animationFrame getter
 angular-mock.MockWindow.document property
@@ -1631,6 +1637,12 @@ angular-mock.Timer.Timer-periodic constructor
 angular-mock.Timer.cancel method
 angular-mock.Timer.isActive getter
 angular-mock.Timer.run method
+angular-mock.WebPlatform class
+angular-mock.WebPlatform.WebPlatform- constructor
+angular-mock.WebPlatform.cssShimRequired getter
+angular-mock.WebPlatform.shadowDomShimRequired getter
+angular-mock.WebPlatform.shimCss method
+angular-mock.WebPlatform.shimShadowDom method
 angular-mock.Window class
 angular-mock.Window.PERSISTENT property
 angular-mock.Window.TEMPORARY property
