@@ -1650,10 +1650,12 @@ angular-mock.MockHttpExpectation.match method
 angular-mock.MockHttpExpectation.matchData method
 angular-mock.MockHttpExpectation.matchHeaders method
 angular-mock.MockHttpExpectation.matchUrl method
+angular-mock.MockHttpExpectation.matchWithCredentials method
 angular-mock.MockHttpExpectation.method property
 angular-mock.MockHttpExpectation.response property
 angular-mock.MockHttpExpectation.toString method
 angular-mock.MockHttpExpectation.url property
+angular-mock.MockHttpExpectation.withCredentials property
 angular-mock.MockHttpRequest class
 angular-mock.MockHttpRequest.MockHttpRequest- constructor
 angular-mock.MockHttpRequest.abort method
