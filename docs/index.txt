@@ -2622,7 +2622,6 @@ angular/angular.NgRouteCfg.view property
 angular/angular.NgRouteCfg.viewHtml property
 angular/angular.NgRoutingHelper class
 angular/angular.NgRoutingHelper.NgRoutingHelper- constructor
-angular/angular.NgRoutingHelper.portals property
 angular/angular.NgRoutingHelper.router property
 angular/angular.NgRoutingUsePushState class
 angular/angular.NgRoutingUsePushState.NgRoutingUsePushState- constructor
@@ -2685,15 +2684,10 @@ angular/angular.NgValue.value= setter
 angular/angular.NgView class
 angular/angular.NgView.NgView- constructor
 angular/angular.NgView.detach method
-angular/angular.NgView.element property
-angular/angular.NgView.injector property
-angular/angular.NgView.locationService property
 angular/angular.NgView.module method
 angular/angular.NgView.parameters getter
 angular/angular.NgView.route getter
 angular/angular.NgView.routeName getter
-angular/angular.NgView.scope property
-angular/angular.NgView.viewCache property
 angular/angular.NoOpAnimation class
 angular/angular.NoOpAnimation.cancel method
 angular/angular.NoOpAnimation.complete method
