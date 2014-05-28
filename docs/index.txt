@@ -2817,6 +2817,7 @@ angular/angular.Route.newHandle method
 angular/angular.Route.onEnter getter
 angular/angular.Route.onLeave getter
 angular/angular.Route.onPreEnter getter
+angular/angular.Route.onPreLeave getter
 angular/angular.Route.onRoute getter
 angular/angular.Route.parameters getter
 angular/angular.Route.parent getter
@@ -2842,6 +2843,7 @@ angular/angular.RouteHandle.newHandle method
 angular/angular.RouteHandle.onEnter getter
 angular/angular.RouteHandle.onLeave getter
 angular/angular.RouteHandle.onPreEnter getter
+angular/angular.RouteHandle.onPreLeave getter
 angular/angular.RouteHandle.onRoute getter
 angular/angular.RouteHandle.parameters getter
 angular/angular.RouteHandle.parent getter
@@ -2857,6 +2859,7 @@ angular/angular.RouteImpl.newHandle method
 angular/angular.RouteImpl.onEnter getter
 angular/angular.RouteImpl.onLeave getter
 angular/angular.RouteImpl.onPreEnter getter
+angular/angular.RouteImpl.onPreLeave getter
 angular/angular.RouteImpl.onRoute getter
 angular/angular.RouteImpl.parameters getter
 angular/angular.RouteImpl.parent property
@@ -2866,12 +2869,15 @@ angular/angular.RouteInitializer.init method
 angular/angular.RouteInitializerFn typedef
 angular/angular.RouteLeaveEvent class
 angular/angular.RouteLeaveEvent.RouteLeaveEvent- constructor
-angular/angular.RouteLeaveEvent.allowLeave method
 angular/angular.RouteLeaveEventHandler typedef
 angular/angular.RoutePreEnterEvent class
 angular/angular.RoutePreEnterEvent.RoutePreEnterEvent- constructor
 angular/angular.RoutePreEnterEvent.allowEnter method
 angular/angular.RoutePreEnterEventHandler typedef
+angular/angular.RoutePreLeaveEvent class
+angular/angular.RoutePreLeaveEvent.RoutePreLeaveEvent- constructor
+angular/angular.RoutePreLeaveEvent.allowLeave method
+angular/angular.RoutePreLeaveEventHandler typedef
 angular/angular.RouteProvider class
 angular/angular.RouteProvider.parameters getter
 angular/angular.RouteProvider.route getter
