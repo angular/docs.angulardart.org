@@ -2006,6 +2006,7 @@ angular/angular.Component.publishAs property
 angular/angular.Component.resetStyleInheritance getter
 angular/angular.Component.template property
 angular/angular.Component.templateUrl property
+angular/angular.Component.useNgBaseCss property
 angular/angular.Component.useShadowDom property
 angular/angular.ConstantAST class
 angular/angular.ConstantAST.ConstantAST- constructor
