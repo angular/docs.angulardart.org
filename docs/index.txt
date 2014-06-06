@@ -7,6 +7,8 @@ angular/angular-animate.AbstractNgAnimate.option getter
 angular/angular-animate.AbstractNgAnimate.option= setter
 angular/angular-animate.Animate class
 angular/angular-animate.Animate.addClass method
+angular/angular-animate.Animate.animationsAllowed getter
+angular/angular-animate.Animate.animationsAllowed= setter
 angular/angular-animate.Animate.insert method
 angular/angular-animate.Animate.move method
 angular/angular-animate.Animate.remove method
@@ -33,6 +35,7 @@ angular/angular-animate.AnimationOptimizer class
 angular/angular-animate.AnimationOptimizer.AnimationOptimizer- constructor
 angular/angular-animate.AnimationOptimizer.alwaysAnimate method
 angular/angular-animate.AnimationOptimizer.alwaysAnimateChildren method
+angular/angular-animate.AnimationOptimizer.animationsAllowed property
 angular/angular-animate.AnimationOptimizer.detachAlwaysAnimateOptions method
 angular/angular-animate.AnimationOptimizer.forget method
 angular/angular-animate.AnimationOptimizer.shouldAnimate method
@@ -48,6 +51,8 @@ angular/angular-animate.CssAnimate.NG_REMOVE property
 angular/angular-animate.CssAnimate.NG_REMOVE_POSTFIX property
 angular/angular-animate.CssAnimate.addClass method
 angular/angular-animate.CssAnimate.animate method
+angular/angular-animate.CssAnimate.animationsAllowed getter
+angular/angular-animate.CssAnimate.animationsAllowed= setter
 angular/angular-animate.CssAnimate.cancelAnimation method
 angular/angular-animate.CssAnimate.insert method
 angular/angular-animate.CssAnimate.move method
@@ -180,6 +185,8 @@ angular/angular-core.AST.setupWatch method
 angular/angular-core.AST.toString method
 angular/angular-core.Animate class
 angular/angular-core.Animate.addClass method
+angular/angular-core.Animate.animationsAllowed getter
+angular/angular-core.Animate.animationsAllowed= setter
 angular/angular-core.Animate.insert method
 angular/angular-core.Animate.move method
 angular/angular-core.Animate.remove method
@@ -190,6 +197,11 @@ angular/angular-core.Animation.complete method
 angular/angular-core.Animation.onCompleted getter
 angular/angular-core.AnimationResult class
 angular/angular-core.AnimationResult.isCompleted getter
+angular/angular-core.AnnotationMap class
+angular/angular-core.AnnotationMap.AnnotationMap- constructor
+angular/angular-core.AnnotationMap.[] operator
+angular/angular-core.AnnotationMap.annotationsFor method
+angular/angular-core.AnnotationMap.forEach method
 angular/angular-core.AnnotationsMap class
 angular/angular-core.AnnotationsMap.AnnotationsMap- constructor
 angular/angular-core.AnnotationsMap.[] operator
@@ -299,6 +311,9 @@ angular/angular-core.FieldGetterFactory.getter method
 angular/angular-core.FieldReadAST class
 angular/angular-core.FieldReadAST.FieldReadAST- constructor
 angular/angular-core.FieldReadAST.setupWatch method
+angular/angular-core.FormatterMap class
+angular/angular-core.FormatterMap.FormatterMap- constructor
+angular/angular-core.FormatterMap.call method
 angular/angular-core.FunctionApply class
 angular/angular-core.FunctionApply.apply method
 angular/angular-core.FunctionApply.call method
@@ -469,6 +484,7 @@ angular/angular-core.Scope.isDestroyed getter
 angular/angular-core.Scope.on method
 angular/angular-core.Scope.parentScope getter
 angular/angular-core.Scope.watch method
+angular/angular-core.Scope.watchAST method
 angular/angular-core.ScopeDigestTTL class
 angular/angular-core.ScopeDigestTTL.ScopeDigestTTL- constructor
 angular/angular-core.ScopeDigestTTL.ScopeDigestTTL-value constructor
@@ -1891,12 +1907,15 @@ angular/angular.AHref.element property
 angular/angular.AST class
 angular/angular.AST.AST- constructor
 angular/angular.AST.expression property
+angular/angular.AST.parsedExp property
 angular/angular.AST.setupWatch method
 angular/angular.AST.toString method
 angular/angular.AngularModule class
 angular/angular.AngularModule.AngularModule- constructor
 angular/angular.Animate class
 angular/angular.Animate.addClass method
+angular/angular.Animate.animationsAllowed getter
+angular/angular.Animate.animationsAllowed= setter
 angular/angular.Animate.insert method
 angular/angular.Animate.move method
 angular/angular.Animate.remove method
@@ -1911,6 +1930,11 @@ angular/angular.AnimationResult.COMPLETED property
 angular/angular.AnimationResult.COMPLETED_IGNORED property
 angular/angular.AnimationResult.isCompleted getter
 angular/angular.AnimationResult.value property
+angular/angular.AnnotationMap class
+angular/angular.AnnotationMap.AnnotationMap- constructor
+angular/angular.AnnotationMap.[] operator
+angular/angular.AnnotationMap.annotationsFor method
+angular/angular.AnnotationMap.forEach method
 angular/angular.AnnotationsMap class
 angular/angular.AnnotationsMap.AnnotationsMap- constructor
 angular/angular.AnnotationsMap.[] operator
@@ -2122,6 +2146,9 @@ angular/angular.Formatter.Formatter- constructor
 angular/angular.Formatter.hashCode getter
 angular/angular.Formatter.name property
 angular/angular.Formatter.toString method
+angular/angular.FormatterMap class
+angular/angular.FormatterMap.FormatterMap- constructor
+angular/angular.FormatterMap.call method
 angular/angular.FormatterModule class
 angular/angular.FormatterModule.FormatterModule- constructor
 angular/angular.FunctionApply class
@@ -2922,6 +2949,7 @@ angular/angular.Scope.on method
 angular/angular.Scope.parentScope getter
 angular/angular.Scope.rootScope property
 angular/angular.Scope.watch method
+angular/angular.Scope.watchAST method
 angular/angular.ScopeDigestTTL class
 angular/angular.ScopeDigestTTL.ScopeDigestTTL- constructor
 angular/angular.ScopeDigestTTL.ScopeDigestTTL-value constructor
