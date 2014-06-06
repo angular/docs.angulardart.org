@@ -7,8 +7,6 @@ angular/angular-animate.AbstractNgAnimate.option getter
 angular/angular-animate.AbstractNgAnimate.option= setter
 angular/angular-animate.Animate class
 angular/angular-animate.Animate.addClass method
-angular/angular-animate.Animate.animationsAllowed getter
-angular/angular-animate.Animate.animationsAllowed= setter
 angular/angular-animate.Animate.insert method
 angular/angular-animate.Animate.move method
 angular/angular-animate.Animate.remove method
@@ -35,7 +33,6 @@ angular/angular-animate.AnimationOptimizer class
 angular/angular-animate.AnimationOptimizer.AnimationOptimizer- constructor
 angular/angular-animate.AnimationOptimizer.alwaysAnimate method
 angular/angular-animate.AnimationOptimizer.alwaysAnimateChildren method
-angular/angular-animate.AnimationOptimizer.animationsAllowed property
 angular/angular-animate.AnimationOptimizer.detachAlwaysAnimateOptions method
 angular/angular-animate.AnimationOptimizer.forget method
 angular/angular-animate.AnimationOptimizer.shouldAnimate method
@@ -51,8 +48,6 @@ angular/angular-animate.CssAnimate.NG_REMOVE property
 angular/angular-animate.CssAnimate.NG_REMOVE_POSTFIX property
 angular/angular-animate.CssAnimate.addClass method
 angular/angular-animate.CssAnimate.animate method
-angular/angular-animate.CssAnimate.animationsAllowed getter
-angular/angular-animate.CssAnimate.animationsAllowed= setter
 angular/angular-animate.CssAnimate.cancelAnimation method
 angular/angular-animate.CssAnimate.insert method
 angular/angular-animate.CssAnimate.move method
@@ -185,8 +180,6 @@ angular/angular-core.AST.setupWatch method
 angular/angular-core.AST.toString method
 angular/angular-core.Animate class
 angular/angular-core.Animate.addClass method
-angular/angular-core.Animate.animationsAllowed getter
-angular/angular-core.Animate.animationsAllowed= setter
 angular/angular-core.Animate.insert method
 angular/angular-core.Animate.move method
 angular/angular-core.Animate.remove method
@@ -1914,8 +1907,6 @@ angular/angular.AngularModule class
 angular/angular.AngularModule.AngularModule- constructor
 angular/angular.Animate class
 angular/angular.Animate.addClass method
-angular/angular.Animate.animationsAllowed getter
-angular/angular.Animate.animationsAllowed= setter
 angular/angular.Animate.insert method
 angular/angular.Animate.move method
 angular/angular.Animate.remove method
@@ -2271,11 +2262,11 @@ angular/angular.InvalidBindingError.InvalidBindingError- constructor
 angular/angular.Json class
 angular/angular.Json.call method
 angular/angular.Key class
-angular/angular.Key.== operator
 angular/angular.Key.Key- constructor
 angular/angular.Key.annotation property
-angular/angular.Key.hashCode property
+angular/angular.Key.hashCode getter
 angular/angular.Key.id property
+angular/angular.Key.numInstances getter
 angular/angular.Key.toString method
 angular/angular.Key.type property
 angular/angular.LimitTo class
