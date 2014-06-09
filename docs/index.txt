@@ -246,6 +246,9 @@ angular/angular-core.CollectionAST.CollectionAST- constructor
 angular/angular-core.CollectionAST.setupWatch method
 angular/angular-core.Compiler class
 angular/angular-core.Compiler.call method
+angular/angular-core.CompilerConfig class
+angular/angular-core.CompilerConfig.CompilerConfig- constructor
+angular/angular-core.CompilerConfig.CompilerConfig-withOptions constructor
 angular/angular-core.ConstantAST class
 angular/angular-core.ConstantAST.ConstantAST- constructor
 angular/angular-core.ConstantAST.setupWatch method
@@ -2013,6 +2016,10 @@ angular/angular.CollectionAST.setupWatch method
 angular/angular.CollectionAST.valueAST property
 angular/angular.Compiler class
 angular/angular.Compiler.call method
+angular/angular.CompilerConfig class
+angular/angular.CompilerConfig.CompilerConfig- constructor
+angular/angular.CompilerConfig.CompilerConfig-withOptions constructor
+angular/angular.CompilerConfig.elementProbeEnabled property
 angular/angular.Component class
 angular/angular.Component.Component- constructor
 angular/angular.Component.applyAuthorStyles getter
