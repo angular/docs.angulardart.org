@@ -1784,6 +1784,7 @@ angular/angular-mock.MockWebPlatform.shimCss method
 angular/angular-mock.MockWebPlatform.shimShadowDom method
 angular/angular-mock.MockWindow class
 angular/angular-mock.MockWindow.animationFrame getter
+angular/angular-mock.MockWindow.animationFrameCompleter property
 angular/angular-mock.MockWindow.document property
 angular/angular-mock.MockWindow.executeAnimationFrame method
 angular/angular-mock.MockWindow.history property
