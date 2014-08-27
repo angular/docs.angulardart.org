@@ -1,0 +1,5 @@
+# Based on client/lib/config/config.yaml.sample
+#
+# AngularDart keys for Google Analytics and Google Web Master Tools
+trackingCode: UA-8594346-12
+trackingDomain: angulardart.org 
