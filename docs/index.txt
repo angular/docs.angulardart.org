@@ -164,9 +164,6 @@ angular/angular-core-annotation.Component.template property
 angular/angular-core-annotation.Component.templateUrl property
 angular/angular-core-annotation.Component.useNgBaseCss property
 angular/angular-core-annotation.Component.useShadowDom property
-angular/angular-core-annotation.Controller class
-angular/angular-core-annotation.Controller.Controller- constructor
-angular/angular-core-annotation.Controller.publishAs property
 angular/angular-core-annotation.Decorator class
 angular/angular-core-annotation.Decorator.Decorator- constructor
 angular/angular-core-annotation.DetachAware class
@@ -593,8 +590,6 @@ angular/angular-core.RootScope.STATE_FLUSH_ASSERT property
 angular/angular-core.RootScope.astCache property
 angular/angular-core.RootScope.destroy method
 angular/angular-core.RootScope.digest method
-angular/angular-core.RootScope.domRead method
-angular/angular-core.RootScope.domWrite method
 angular/angular-core.RootScope.flush method
 angular/angular-core.RootScope.isAttached getter
 angular/angular-core.RootScope.rootScope getter
@@ -611,6 +606,8 @@ angular/angular-core.Scope.broadcast method
 angular/angular-core.Scope.context property
 angular/angular-core.Scope.createChild method
 angular/angular-core.Scope.destroy method
+angular/angular-core.Scope.domRead method
+angular/angular-core.Scope.domWrite method
 angular/angular-core.Scope.emit method
 angular/angular-core.Scope.eval method
 angular/angular-core.Scope.hasOwnStreams getter
@@ -671,6 +668,8 @@ angular/angular-core.View class
 angular/angular-core.View.View- constructor
 angular/angular-core.View.addContent method
 angular/angular-core.View.addViewPort method
+angular/angular-core.View.domRead method
+angular/angular-core.View.domWrite method
 angular/angular-core.View.insertionPoints property
 angular/angular-core.View.nodes property
 angular/angular-core.View.scope property
