@@ -159,10 +159,8 @@ angular/angular-core-annotation.AttachAware class
 angular/angular-core-annotation.AttachAware.attach method
 angular/angular-core-annotation.Component class
 angular/angular-core-annotation.Component.Component- constructor
-angular/angular-core-annotation.Component.applyAuthorStyles getter
 angular/angular-core-annotation.Component.cssUrls getter
 angular/angular-core-annotation.Component.publishAs property
-angular/angular-core-annotation.Component.resetStyleInheritance getter
 angular/angular-core-annotation.Component.template property
 angular/angular-core-annotation.Component.templateUrl property
 angular/angular-core-annotation.Component.useNgBaseCss property
@@ -186,6 +184,7 @@ angular/angular-core-annotation.Directive.map property
 angular/angular-core-annotation.Directive.module property
 angular/angular-core-annotation.Directive.selector property
 angular/angular-core-annotation.Directive.toString method
+angular/angular-core-annotation.Directive.updateBoundElementPropertiesOnEvents property
 angular/angular-core-annotation.Directive.visibility property
 angular/angular-core-annotation.DirectiveAnnotation class
 angular/angular-core-annotation.DirectiveAnnotation.DirectiveAnnotation- constructor
