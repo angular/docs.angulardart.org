@@ -258,10 +258,7 @@ angular/angular-core.BrowserCookies.URL_PROTOCOL property
 angular/angular-core.BrowserCookies.[] operator
 angular/angular-core.BrowserCookies.[]= operator
 angular/angular-core.BrowserCookies.all getter
-angular/angular-core.BrowserCookies.baseElement property
 angular/angular-core.BrowserCookies.cookiePath property
-angular/angular-core.BrowserCookies.lastCookieString property
-angular/angular-core.BrowserCookies.lastCookies property
 angular/angular-core.Cache class
 angular/angular-core.Cache.capacity getter
 angular/angular-core.Cache.clear method
@@ -770,7 +767,7 @@ angular/angular-directive.InputSelect class
 angular/angular-directive.InputSelect.InputSelect- constructor
 angular/angular-directive.InputSelect.attach method
 angular/angular-directive.InputSelect.dirty method
-angular/angular-directive.InputSelect.expando property
+angular/angular-directive.InputSelect.options property
 angular/angular-directive.InputTextLike class
 angular/angular-directive.InputTextLike.InputTextLike- constructor
 angular/angular-directive.InputTextLike.inputElement property
@@ -878,8 +875,6 @@ angular/angular-directive.NgControl.valid getter
 angular/angular-directive.NgControl.validSubmit getter
 angular/angular-directive.NgEvent class
 angular/angular-directive.NgEvent.NgEvent- constructor
-angular/angular-directive.NgEvent.element property
-angular/angular-directive.NgEvent.initListener method
 angular/angular-directive.NgEvent.listeners property
 angular/angular-directive.NgEvent.onAbort= setter
 angular/angular-directive.NgEvent.onBeforeCopy= setter
@@ -931,7 +926,6 @@ angular/angular-directive.NgEvent.onTouchLeave= setter
 angular/angular-directive.NgEvent.onTouchMove= setter
 angular/angular-directive.NgEvent.onTouchStart= setter
 angular/angular-directive.NgEvent.onTransitionEnd= setter
-angular/angular-directive.NgEvent.scope property
 angular/angular-directive.NgFalseValue class
 angular/angular-directive.NgFalseValue.NgFalseValue- constructor
 angular/angular-directive.NgFalseValue.element property
