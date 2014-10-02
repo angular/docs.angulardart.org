@@ -484,6 +484,11 @@ angular/angular-core.NullTreeSanitizer.sanitizeTree method
 angular/angular-core.Parser class
 angular/angular-core.Parser.Parser- constructor
 angular/angular-core.Parser.call method
+angular/angular-core.PendingAsync class
+angular/angular-core.PendingAsync.decreaseCount method
+angular/angular-core.PendingAsync.increaseCount method
+angular/angular-core.PendingAsync.numPending getter
+angular/angular-core.PendingAsync.whenStable method
 angular/angular-core.PrototypeMap class
 angular/angular-core.PrototypeMap.PrototypeMap- constructor
 angular/angular-core.PrototypeMap.[] operator
@@ -560,6 +565,7 @@ angular/angular-core.Scope.apply method
 angular/angular-core.Scope.broadcast method
 angular/angular-core.Scope.context property
 angular/angular-core.Scope.createChild method
+angular/angular-core.Scope.createProtoChild method
 angular/angular-core.Scope.destroy method
 angular/angular-core.Scope.domRead method
 angular/angular-core.Scope.domWrite method
@@ -681,6 +687,7 @@ angular/angular-core.VmTurnZone class
 angular/angular-core.VmTurnZone.VmTurnZone- constructor
 angular/angular-core.VmTurnZone.assertInTurn method
 angular/angular-core.VmTurnZone.assertInZone method
+angular/angular-core.VmTurnZone.countPendingAsync property
 angular/angular-core.VmTurnZone.onError property
 angular/angular-core.VmTurnZone.onScheduleMicrotask property
 angular/angular-core.VmTurnZone.onTurnDone property
@@ -715,6 +722,7 @@ angular/angular-core.WatchRecord class
 angular/angular-core.WatchRecord.check method
 angular/angular-core.WatchRecord.object= setter
 angular/angular-core.WatchRecord.remove method
+angular/angular-core.WhenStableCallback typedef
 angular/angular-directive library
 angular/angular-directive.AHref class
 angular/angular-directive.AHref.AHref- constructor
@@ -790,6 +798,7 @@ angular/angular-directive.NgAttribute class
 angular/angular-directive.NgAttribute.NgAttribute- constructor
 angular/angular-directive.NgAttribute.attach method
 angular/angular-directive.NgBaseCss class
+angular/angular-directive.NgBaseCss.styles property
 angular/angular-directive.NgBaseCss.urls getter
 angular/angular-directive.NgBaseCss.urls= setter
 angular/angular-directive.NgBind class
@@ -1786,6 +1795,9 @@ angular/angular-mock.MockWindow.onHashChange getter
 angular/angular-mock.MockWindow.onHashChangeController property
 angular/angular-mock.MockWindow.onPopState getter
 angular/angular-mock.MockWindow.onPopStateController property
+angular/angular-mock.MockZone class
+angular/angular-mock.MockZone.current getter
+angular/angular-mock.MockZone.fork method
 angular/angular-mock.Module class
 angular/angular-mock.Module.DEFAULT_REFLECTOR property
 angular/angular-mock.Module.Module- constructor
@@ -2188,6 +2200,8 @@ angular/angular-tracing-ng.Scope_execAsync property
 angular/angular-tracing-ng.Scope_flush property
 angular/angular-tracing-ng.View_create property
 angular/angular-tracing-ng.View_createComponent property
+angular/angular-tracing-ng.View_styles property
+angular/angular-tracing-ng.VmTurnZone_createTimer property
 angular/angular-tracing-ng.VmTurnZone_run property
 angular/angular-tracing-ng.VmTurnZone_scheduleMicrotask property
 angular/angular-tracing.traceAsyncEnd method
