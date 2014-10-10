@@ -21,7 +21,7 @@
         </button>
 
         <a href="http://docs.angulardart.org/" class="navbar-brand header-logo"></a>
-        <a href="{{homePage}}" on-click="{{rerouteLink}}"
+        <a _href="{{homePage}}" on-click="{{rerouteLink}}"
           class="navbar-brand btn-link">
           AngularDart API Reference
         </a>
@@ -79,7 +79,7 @@
         </dartdoc-minimap-class>
       </template>
       <template if="{{sdkVersionString}}">
-        <div>with AngularDart Version {{sdkVersionString}}</div>
+        <div>AngularDart Version {{version}} with Dart SDK {{sdkVersionString}}</div>
       </template>
     </div>
   </template>
