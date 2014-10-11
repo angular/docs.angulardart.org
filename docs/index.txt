@@ -548,6 +548,7 @@ angular/angular-core.ResourceUrlResolver.combine method
 angular/angular-core.ResourceUrlResolver.combineWithType method
 angular/angular-core.ResourceUrlResolver.cssImportRegexp property
 angular/angular-core.ResourceUrlResolver.cssUrlRegexp property
+angular/angular-core.ResourceUrlResolver.docForParsing property
 angular/angular-core.ResourceUrlResolver.quotes property
 angular/angular-core.ResourceUrlResolver.resolveCssText method
 angular/angular-core.ResourceUrlResolver.resolveHtml method
@@ -1246,6 +1247,7 @@ angular/angular-introspection.ResourceUrlResolver.combine method
 angular/angular-introspection.ResourceUrlResolver.combineWithType method
 angular/angular-introspection.ResourceUrlResolver.cssImportRegexp property
 angular/angular-introspection.ResourceUrlResolver.cssUrlRegexp property
+angular/angular-introspection.ResourceUrlResolver.docForParsing property
 angular/angular-introspection.ResourceUrlResolver.quotes property
 angular/angular-introspection.ResourceUrlResolver.resolveCssText method
 angular/angular-introspection.ResourceUrlResolver.resolveHtml method
